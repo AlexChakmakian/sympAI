@@ -1,0 +1,62 @@
+/* Landing Page Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling */
+  height: 100%;
+}
+
+.landing-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Use viewport height instead of min-height */
+  width: 100vw; /* Set width to viewport width */
+  background-color: #2f3e46; /* Dark slate blue-gray */
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  box-sizing: border-box; /* Include padding in element's total width/height */
+  padding: 20px;
+  overflow: hidden; /* Prevent scrolling within the container */
+}
+  
+.content {
+  max-width: 600px;
+}
+  
+.tagline {
+  font-weight: 500;
+  color: #cbd5e1; /* Soft gray */
+  margin-bottom: 10px;
+}
+  
+.title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 10px 0;
+}
+  
+.subtitle {
+  font-size: 1rem;
+  color: #d1d5db;
+  margin: 20px 0;
+  line-height: 1.5;
+}
+  
+.cta-button {
+  margin-top: 20px;
+  display: inline-block;
+  background-color: #f1f5f9;
+  color: #1e293b;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+  
+.cta-button:hover {
+  background-color: #e2e8f0;
+  transform: translateY(-2px);
+}

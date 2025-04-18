@@ -1,5 +1,8 @@
+/* Global Styles */
 .App {
   text-align: center;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
 }
 
 .App-logo {
