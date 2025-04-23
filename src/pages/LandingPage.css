@@ -1,4 +1,5 @@
 /* Landing Page Styles */
+
 html, body {
   margin: 0;
   padding: 0;
@@ -12,9 +13,9 @@ html, body {
   justify-content: center;
   height: 100vh; /* Use viewport height instead of min-height */
   width: 100vw; /* Set width to viewport width */
-  background-color: #2f3e46; /* Dark slate blue-gray */
+  background-color: #2F3E46; /* Dark slate blue-gray */
   color: #ffffff;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Istok Web', sans-serif;
   text-align: center;
   box-sizing: border-box; /* Include padding in element's total width/height */
   padding: 20px;
@@ -29,16 +30,17 @@ html, body {
   font-weight: 500;
   color: #cbd5e1; /* Soft gray */
   margin-bottom: 10px;
+  font-size: 1.1rem
 }
   
 .title {
-  font-size: 4rem;
-  font-weight: 800;
+  font-size: 5rem;
+  font-weight: bold;
   margin: 10px 0;
 }
   
 .subtitle {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #d1d5db;
   margin: 20px 0;
   line-height: 1.5;
@@ -47,7 +49,7 @@ html, body {
 .cta-button {
   margin-top: 20px;
   display: inline-block;
-  background-color: #f1f5f9;
+  background-color: #E0E1DD;
   color: #1e293b;
   padding: 12px 24px;
   border-radius: 8px;
