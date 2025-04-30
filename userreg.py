@@ -7,22 +7,22 @@ routes = Blueprint('routes', __name__)
 @routes.route('/register', methods=['POST'])
 def register():
     data = request.get_json()
-    username = data.get('username')
+   # username = data.get('username')
     email = data.get('email')
     password = data.get('password')
-    # password = generate_password_hash(data.get('password'))
+    password = generate_password_hash(data.get('password'))
 
-    if not username or not email or not password: 
+    if not email or not password: 
         return jsonify({'error': 'All fields are required'}), 400
 
     if User.query.filter_by(email=email).first():
         return jsonify({'error': 'User already exists. Try logging in.'}), 409
 
-    new_user = User(username=username, email=email, password=password)
+    new_user = User(email=email, password=password)
     db.session.add(new_user)
     db.session.commit()
 
-    return jsonify({'message': f'Welcome {username}! You successfully registered!!'}), 201
+    return jsonify({'message': f'Welcome {email}! You successfully registered!!'}), 201
 
 @routes.route('/login', methods= ['POST'])
 def login():
@@ -38,11 +38,12 @@ def login():
     if not check_password_hash(user.password, password):
         return jsonify({'error': 'Incorrect password. Please try again.'})
     
+    username = user.email.split('@')[0]
     return jsonify({
-        'message': f'Welcome back, {user.username}!',
+        'message': f'Welcome back, {username}!',
         'user': {
             'id': user.id,
-            'username': user.username,
+            #'username': user.username,
             'email': user.email
         }
     }), 200
