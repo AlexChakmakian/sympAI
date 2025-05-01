@@ -3,37 +3,42 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  font-family: 'Istok Web', sans-serif;
+  font-family: 'Inter', 'Istok Web', sans-serif;
+  background-color: #f8f9fa;
 }
 
 .chatbot-header {
   background-color: #2F3E46;
   color: white;
-  padding: 0.4rem;
+  padding: 0.8rem 1.2rem;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 10;
 }
 
 .header-subtitle {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   margin-top: -6px;
   opacity: 0.8;
+  letter-spacing: 0.02em;
 }
 
 .chat-container {
   flex: 1;
   display: flex;
   flex-direction: column;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   width: 100%;
   padding: 20px;
   height: calc(100vh - 80px); /* Account for header height */
   position: relative;
   overflow: hidden; /* Hide overflow */
+  background-color: #fff;
+  box-shadow: 0 0 30px rgba(0,0,0,0.05);
+  border-radius: 0 0 12px 12px;
 }
 
 .messages {
@@ -42,20 +47,33 @@
   padding: 16px;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
-  padding: 1rem 0;
+  gap: 1.5rem;
+  padding: 1rem 0.5rem;
+  scroll-behavior: smooth;
 }
 
 .message {
-  padding: 10px 15px;
-  border-radius: 10px;
-  max-width: 70%;
-  padding: 14px 18px;
+  max-width: 75%;
+  padding: 16px 20px;
   margin: 8px 0;
-  border-radius: 18px;
+  border-radius: 20px;
   word-wrap: break-word;
   font-size: 15px;
-  line-height: 1.5;
+  line-height: 1.6;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .message.user {
@@ -63,6 +81,7 @@
   background-color: #ACB7C3;
   color: #403B3B;
   border-bottom-right-radius: 5px;
+  margin-left: 20%;
 }
 
 .message.bot {
@@ -70,28 +89,72 @@
   background-color: #C5C7C2;
   color: #403B3B;
   border-bottom-left-radius: 5px;
+  margin-right: 20%;
+}
+
+.message.error {
+  background-color: #ffe6e6;
+  border-left: 4px solid #ff4d4d;
+}
+
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+}
+
+.typing-indicator span {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #8496a5;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.7;
+  animation: bounce 1.2s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(1) { animation-delay: 0s; }
+.typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+.typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0.8); }
+  40% { transform: scale(1.2); }
 }
 
 .message-input {
   display: flex;
-  margin-top: 1rem;
-  border-top: 1px solid #415A77;
-  padding-top: 1rem;
+  margin-top: 1.2rem;
+  border-top: 1px solid rgba(65, 90, 119, 0.2);
+  padding-top: 1.2rem;
   margin-bottom: 0.5rem;
+  position: relative;
 }
 
 .message-input input {
   flex: 1;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  margin-right: 10px;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 24px;
+  margin-right: 12px;
   font-size: 16px;
   background-color: #CAD2C5;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.message-input input:focus {
+  outline: none;
+  border-color: #2F3E46;
+  box-shadow: 0 0 0 2px rgba(47, 62, 70, 0.2);
 }
 
 .message-input button {
-  padding: 15px 20px;
+  width: 54px;
+  height: 54px;
+  padding: 0;
   background-color: #2F3E46;
   color: white;
   border: none;
@@ -100,16 +163,122 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
 }
 
 .message-input button:disabled {
   background-color: #8496a5;
   cursor: not-allowed;
   opacity: 0.7;
+  transform: scale(0.95);
 }
 
-.message-input button:hover {
+.message-input button:hover:not(:disabled) {
   background-color: #1e293b;
+  transform: translateY(-2px);
+}
+
+.message-input button:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.send-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.disclaimer {
+  text-align: center;
+  color: #777;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-top: 1px solid #eee;
+}
+
+.retry-button {
+  background-color: transparent;
+  color: #2F3E46;
+  border: 1px solid #2F3E46;
+  border-radius: 12px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.retry-button:hover {
+  background-color: #2F3E46;
+  color: white;
+}
+
+/* Speech Button Styles - More minimalistic and positioned on right */
+.speech-button {
+  position: absolute;
+  right: 80px; /* Position to the left of the send button */
+  top: 60%;
+  transform: translateY(-51%);
+  background-color: rgba(47, 62, 70, 0.05); /* Light visible background */
+  border: 1px solid rgba(47, 62, 70, 0.1); /* Subtle border */
+  color: #2F3E46;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.2s;
+  width: 26px; /* Significantly smaller width */
+  height: 26px; /* Significantly smaller height */
+  border-radius: 50%; /* Perfect circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.speech-button:hover {
+  opacity: 0.85;
+  background-color: rgba(47, 62, 70, 0.05); /* No color change */
+  transform: none; /* No movement */
+}
+
+.speech-button.active {
+  color: #ff4d4d;
+  opacity: 0.9;
+  animation: subtle-pulse 1.5s infinite;
+}
+
+@keyframes subtle-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.2); }
+  70% { box-shadow: 0 0 0 3px rgba(255, 77, 77, 0); } /* Smaller pulse */
+  100% { box-shadow: 0 0 0 0 rgba(255, 77, 77, 0); }
+}
+
+/* With speech button, no need for left padding adjustment */
+.with-speech-button input {
+  padding-right: 90px; /* Make room for mic and send buttons */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .chat-container {
+    padding: 15px 10px;
+    border-radius: 0;
+  }
+  
+  .message {
+    max-width: 85%;
+    padding: 14px 16px;
+  }
+  
+  .message-input input {
+    padding: 14px;
+  }
+  
+  .message-input button {
+    width: 48px;
+    height: 48px;
+  }
 }

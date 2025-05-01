@@ -194,19 +194,26 @@ def ask_sympai(user_input, index, medical_corpus):
         
         debug_log("Sending request to Groq API")
         
-        # System prompt
+        # Improved system prompt for more concise responses
         system_prompt = (
             "You are SympAI, a virtual symptom assistant. "
-            "You ONLY respond to symptom-related health questions. "
+            "You ONLY respond to symptom-related health questions with concise, helpful information. "
             "You must not impersonate any patient or assume personal health data. "
-            "Use the clinical background only to support your responses in general terms. "
-            "Always remind the user to consult a real healthcare provider for diagnosis or treatment. "
-            "Politely decline requests for non-medical or entertainment topics."
+            "Use the clinical background to inform your responses without directly citing it. "
+            "Include a single, brief healthcare disclaimer at the end of your response. "
+            "Keep responses under 200 words when possible. "
+            "Politely decline non-medical requests."
+        )
+        
+        user_prompt = (
+            f"{user_input}\n\n"
+            f"Remember to be concise and include only one brief medical disclaimer at the end of your response."
+            f"{context_block}"
         )
         
         messages = [
             {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_input + context_block}
+            {"role": "user", "content": user_prompt}
         ]
         
         # Get response from Groq
@@ -214,7 +221,7 @@ def ask_sympai(user_input, index, medical_corpus):
             model="llama3-8b-8192",
             messages=messages,
             temperature=0.4,
-            max_tokens=800
+            max_tokens=600
         )
         
         result = response.choices[0].message.content
@@ -225,13 +232,13 @@ def ask_sympai(user_input, index, medical_corpus):
         
         # For school project demo purposes, provide a useful fallback rather than an error
         if "head" in user_input.lower():
-            return "Headaches can have various causes ranging from tension and stress to more serious conditions in some cases. Common types include tension headaches, migraines, and cluster headaches. Symptoms may vary from dull pain to throbbing sensations, and may be accompanied by sensitivity to light or sound. It's important to consult with a healthcare provider for persistent or severe headaches, especially if they're sudden or accompanied by other symptoms like vision changes or confusion."
+            return "Headaches can have various causes ranging from tension and stress to more serious conditions. Common types include tension headaches, migraines, and cluster headaches. Symptoms may vary from dull pain to throbbing sensations, and may be accompanied by sensitivity to light or sound. If symptoms are severe or persistent, consider consulting a healthcare provider."
         elif "stomach" in user_input.lower() or "nausea" in user_input.lower():
-            return "Stomach discomfort and nausea can be caused by various conditions including infections, food intolerances, or digestive disorders. Common causes include gastroenteritis, food poisoning, or acid reflux. Symptoms may include pain, bloating, vomiting, or changes in bowel movements. While most causes resolve on their own, persistent symptoms should be evaluated by a healthcare provider, especially if accompanied by fever, severe pain, or dehydration."
+            return "Stomach discomfort and nausea can be caused by various conditions including infections, food intolerances, or digestive disorders. Common causes include gastroenteritis, food poisoning, or acid reflux. While most causes resolve on their own, persistent symptoms should be evaluated by a healthcare provider."
         elif "fever" in user_input.lower():
-            return "Fever is the body's natural response to infection or illness. It's typically defined as a body temperature above 100.4°F (38°C). Common causes include viral infections like the flu, bacterial infections such as strep throat, or inflammatory conditions. If a fever is high (above 103°F), persists for more than a few days, or is accompanied by severe symptoms like difficulty breathing or confusion, it's important to seek medical attention promptly."
+            return "Fever is the body's natural response to infection or illness. Common causes include viral infections like the flu, bacterial infections such as strep throat, or inflammatory conditions. If a fever is high (above 103°F) or persists for several days, it's advisable to seek medical attention."
         else:
-            return "Based on your description of symptoms, there could be several possible explanations. However, for a proper assessment, it would be best to consult with a healthcare provider who can take into account your complete medical history and perform an examination if needed. They can provide specific advice tailored to your situation and recommend appropriate tests or treatments."
+            return "Based on your description of symptoms, there could be several possible explanations. For a proper assessment, it would be best to consult with a healthcare provider who can provide guidance specific to your situation."
 
 def simple_demo_response(query):
     """Generate a simple demo response for when the model isn't available"""
