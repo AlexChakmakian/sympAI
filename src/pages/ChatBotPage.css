@@ -47,6 +47,7 @@
   padding: 16px;
   display: flex;
   flex-direction: column;
+
   gap: 1.5rem;
   padding: 1rem 0.5rem;
   scroll-behavior: smooth;
@@ -135,6 +136,7 @@
 
 .message-input input {
   flex: 1;
+
   padding: 16px;
   border: 1px solid #e0e0e0;
   border-radius: 24px;
