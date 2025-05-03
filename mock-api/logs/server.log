@@ -629,3 +629,28 @@ Disclaimer: If you're experiencing a severe headache or other concerning symptom
 [2025-05-01T21:31:40.160Z] Response sent to client (795 chars)
 [2025-05-01T21:34:07.594Z] SympAI mock API server is running on http://localhost:3001
 [2025-05-01T21:34:07.596Z] Using RAG system from Python notebook for responses
+[2025-05-02T00:09:08.187Z] Received query: "my girlfriend has a headache what should I do"
+[2025-05-02T00:09:08.188Z] Calling Python RAG with query: "my girlfriend has a headache what should I do"
+[2025-05-02T00:09:14.400Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my girlfriend has a headache what should I do']
+DEBUG: Received query: my girlfriend has a headache what should I do
+[2025-05-02T00:09:14.401Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-02T00:09:14.405Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-02T00:09:14.405Z] Python stderr: DEBUG: Processing query: my girlfriend has a headache what should I do
+[2025-05-02T00:09:16.163Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-02T00:09:16.974Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-02T00:09:16.975Z] Python stdout: If your girlfriend is experiencing a headache, you can encourage her to:
+
+* Stay hydrated by drinking plenty of water
+* Avoid loud noises and bright lights
+* Take over-the-counter pain relievers such as acetaminophen or ibuprofen as directed
+* Apply a warm or cold compress to the forehead or neck
+* Rest and avoid strenuous activities
+
+If the headache persists, worsens, or is accompanied by other symptoms such as fever, confusion, or weakness, she should seek medical attention.
+
+Disclaimer: This response is for general information purposes only and should not be considered medical advice. If you or your girlfriend are experiencing persistent or severe symptoms, consult a healthcare professional for proper evaluation and treatment.
+[2025-05-02T00:09:17.543Z] Python process exited with code 0
+[2025-05-02T00:09:17.544Z] RAG response received (749 chars)
+[2025-05-02T00:09:17.545Z] Response sent to client (749 chars)
