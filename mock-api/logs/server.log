@@ -1,0 +1,631 @@
+[2025-04-30T06:40:43.350Z] SympAI mock API server is running on http://localhost:3001
+[2025-04-30T06:40:43.352Z] Using RAG system from Python notebook for responses
+[2025-04-30T06:40:54.510Z] SympAI mock API server is running on http://localhost:3001
+[2025-04-30T06:40:54.512Z] Using RAG system from Python notebook for responses
+[2025-04-30T06:49:16.022Z] SympAI mock API server is running on http://localhost:3001
+[2025-04-30T06:49:16.024Z] Using RAG system from Python notebook for responses
+[2025-04-30T06:49:49.116Z] SympAI mock API server is running on http://localhost:3001
+[2025-04-30T06:49:49.118Z] Using RAG system from Python notebook for responses
+[2025-04-30T06:56:41.828Z] SympAI mock API server is running on http://localhost:3001
+[2025-04-30T06:56:41.830Z] Using RAG system from Python notebook for responses
+[2025-04-30T07:03:33.482Z] SympAI mock API server is running on http://localhost:3001
+[2025-04-30T07:03:33.484Z] Using RAG system from Python notebook for responses
+[2025-04-30T07:09:59.564Z] SympAI mock API server is running on http://localhost:3001
+[2025-04-30T07:09:59.566Z] Using RAG system from Python notebook for responses
+[2025-04-30T07:25:15.229Z] SympAI mock API server is running on http://localhost:3001
+[2025-04-30T07:25:15.231Z] Using RAG system from Python notebook for responses
+[2025-04-30T07:32:11.651Z] SympAI mock API server is running on http://localhost:3001
+[2025-04-30T07:32:11.653Z] Using RAG system from Python notebook for responses
+[2025-04-30T07:34:24.132Z] SympAI mock API server is running on http://localhost:3001
+[2025-04-30T07:34:24.133Z] Using RAG system from Python notebook for responses
+[2025-05-01T01:30:50.819Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-01T01:30:50.821Z] Using RAG system from Python notebook for responses
+[2025-05-01T01:31:00.165Z] Received query: "test"
+[2025-05-01T01:31:00.165Z] Calling Python RAG with query: "test"
+[2025-05-01T01:31:38.886Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'test']
+DEBUG: Received query: test
+[2025-05-01T01:31:38.887Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T01:31:38.905Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query: test
+[2025-05-01T01:31:42.482Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-01T01:31:43.047Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T01:31:43.048Z] Python stdout: I'm SympAI, your virtual symptom assistant. I'm here to help you with your health concerns.
+
+However, I noticed that your message doesn't contain any specific symptoms or health concerns. Could you please provide more information about what's bothering you or what you're experiencing? This will help me provide more accurate and relevant information to support your health needs.
+
+Remember, I'm not a substitute for a real healthcare provider. If you're experiencing any symptoms or health concerns, it's always best to consult with a qualified healthcare professional for a proper diagnosis and treatment plan.
+
+Let's get started! What's on your mind?
+[2025-05-01T01:31:43.626Z] Python process exited with code 0
+[2025-05-01T01:31:43.626Z] RAG response received (659 chars)
+[2025-05-01T01:31:43.628Z] Response sent to client (659 chars)
+[2025-05-01T01:31:51.602Z] Received query: "test"
+[2025-05-01T01:31:51.603Z] Calling Python RAG with query: "test"
+[2025-05-01T01:31:57.227Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'test']
+DEBUG: Received query: test
+[2025-05-01T01:31:57.228Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T01:31:57.232Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-01T01:31:57.232Z] Python stderr: DEBUG: Processing query: test
+[2025-05-01T01:31:58.910Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-01T01:31:59.241Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T01:31:59.242Z] Python stdout: I'm SympAI, a virtual symptom assistant. I'm here to help you with your health concerns. Please note that I'm not a substitute for a real healthcare provider, and you should consult a doctor for a proper diagnosis and treatment.
+
+It seems like you've provided some general clinical background information, which is helpful. However, I'd like to clarify that I'm not familiar with the specific terms "Sample female physical exam" and "Sample of Pulmonary Function Test." Could you please provide more context or information about your symptoms or health concerns?
+
+I'm here to help you understand your symptoms and provide general guidance. Please feel free to share more details, and I'll do my best to assist you.
+[2025-05-01T01:31:59.934Z] Python process exited with code 0
+[2025-05-01T01:31:59.934Z] RAG response received (718 chars)
+[2025-05-01T01:31:59.935Z] Response sent to client (718 chars)
+[2025-05-01T01:33:06.565Z] Received query: "my head hurts"
+[2025-05-01T01:33:06.565Z] Calling Python RAG with query: "my head hurts"
+[2025-05-01T01:33:12.248Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my head hurts']
+DEBUG: Received query: my head hurts
+[2025-05-01T01:33:12.248Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T01:33:12.252Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-01T01:33:12.252Z] Python stderr: DEBUG: Processing query: my head hurts
+[2025-05-01T01:33:13.917Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-01T01:33:14.349Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T01:33:14.350Z] Python stdout: Sorry to hear that your head hurts! As a virtual symptom assistant, I'm here to help you identify possible causes and suggest next steps.
+
+A headache can be caused by various factors, including physical trauma, such as a fall, which may lead to a contusion (bruise) in the brain. Other possible causes of headache include migraines, tension, or sinus issues.
+
+Can you tell me more about your headache? How long have you been experiencing it? Is it a sharp, stabbing pain or a dull ache? Is it located on one side of your head or all over? Have you noticed any other symptoms, such as sensitivity to light or sound, nausea, or vomiting?
+
+Remember, it's essential to consult a real healthcare provider for a proper evaluation and diagnosis. They will be able to assess your symptoms, perform a physical examination, and order any necessary tests to determine the underlying cause of your headache.
+
+In the meantime, you can try to manage your symptoms by staying hydrated, getting plenty of rest, and avoiding any activities that may exacerbate your headache.
+
+Please consult a healthcare provider for further evaluation and guidance.
+[2025-05-01T01:33:14.885Z] Python process exited with code 0
+[2025-05-01T01:33:14.886Z] RAG response received (1142 chars)
+[2025-05-01T01:33:14.887Z] Response sent to client (1142 chars)
+[2025-05-01T01:34:12.776Z] Received query: "Okay my head is better now. But my stomach is hurting and it feels like it's burning"
+[2025-05-01T01:34:12.777Z] Calling Python RAG with query: "Okay my head is better now. But my stomach is hurting and it feels like it's burning"
+[2025-05-01T01:34:18.365Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', "Okay my head is better now. But my stomach is hurting and it feels like it's burning"]
+DEBUG: Received query: Okay my head is better now. But my stomach is hurting and it feels like it's burning
+[2025-05-01T01:34:18.365Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T01:34:18.368Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-01T01:34:18.369Z] Python stderr: DEBUG: Processing query: Okay my head is better now. But my stomach is hurting and it feels like it's burning
+[2025-05-01T01:34:20.284Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-01T01:34:21.059Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T01:34:21.060Z] Python stdout: I'm glad to hear that your headache has improved! However, I'm concerned about the stomach pain and burning sensation you're experiencing. It's important to note that stomach pain can be caused by a variety of factors, and it's always best to consult a healthcare provider for a proper evaluation and diagnosis.
+
+Based on your symptoms, it's possible that you may be experiencing some type of gastrointestinal issue, such as gastritis, gastroesophageal reflux disease (GERD), or a stomach ulcer. However, it's also important to consider other potential causes, such as food poisoning, viral gastroenteritis, or a more serious condition like appendicitis.
+
+In the meantime, you can try to alleviate your symptoms by taking an antacid or acid reducer to help neutralize the burning sensation. You can also try to avoid spicy or fatty foods, and take small, frequent meals to help manage your symptoms.
+
+However, please keep in mind that these are only general suggestions, and it's important to consult a healthcare provider for a proper evaluation and diagnosis. They will be able to assess your symptoms and perform any necessary tests to determine the underlying cause of your stomach pain and burning sensation.
+[2025-05-01T01:34:21.597Z] Python process exited with code 0
+[2025-05-01T01:34:21.597Z] RAG response received (1219 chars)
+[2025-05-01T01:34:21.598Z] Response sent to client (1219 chars)
+[2025-05-01T01:34:44.605Z] Received query: "Do you want to hear a joke?"
+[2025-05-01T01:34:44.605Z] Calling Python RAG with query: "Do you want to hear a joke?"
+[2025-05-01T01:34:50.159Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'Do you want to hear a joke?']
+DEBUG: Received query: Do you want to hear a joke?
+[2025-05-01T01:34:50.160Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T01:34:50.163Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-01T01:34:50.164Z] Python stderr: DEBUG: Processing query: Do you want to hear a joke?
+[2025-05-01T01:34:51.864Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-01T01:34:52.178Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T01:34:52.179Z] Python stdout: I'm happy to help with any symptom-related health questions you may have! However, I'd like to politely decline your request for a joke. As a symptom assistant, my purpose is to provide information and support related to health and wellness, and I'm not equipped to engage in non-medical conversations.
+
+If you're experiencing symptoms or have concerns about your health, I'm here to help. Please feel free to ask me any questions you may have, and I'll do my best to provide you with accurate and helpful information. Remember, it's always important to consult with a qualified healthcare provider for personalized advice and treatment.
+[2025-05-01T01:34:52.723Z] Python process exited with code 0
+[2025-05-01T01:34:52.723Z] RAG response received (639 chars)
+[2025-05-01T01:34:52.724Z] Response sent to client (639 chars)
+[2025-05-01T01:38:10.808Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-01T01:38:10.810Z] Using RAG system from Python notebook for responses
+[2025-05-01T01:39:26.114Z] Received query: "test"
+[2025-05-01T01:39:26.115Z] Calling Python RAG with query: "test"
+[2025-05-01T01:39:31.904Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'test']
+DEBUG: Received query: test
+[2025-05-01T01:39:31.905Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T01:39:31.908Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-01T01:39:31.909Z] Python stderr: DEBUG: Processing query: test
+[2025-05-01T01:39:33.800Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-01T01:39:34.105Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T01:39:34.105Z] Python stdout: I'm SympAI, your virtual symptom assistant. I'm here to help you with your health concerns. However, I noticed that the information provided seems to be a general clinical background and not a specific symptom or health concern. Could you please rephrase or provide more details about your symptoms or health concerns so I can better assist you?
+
+As a reminder, I'm here to provide general information and support, but it's essential to consult a real healthcare provider for a proper diagnosis and treatment plan. They will be able to assess your individual situation and provide personalized advice.
+
+Please feel free to share more about your symptoms or health concerns, and I'll do my best to provide helpful information and guidance.
+[2025-05-01T01:39:34.676Z] Python process exited with code 0
+[2025-05-01T01:39:34.676Z] RAG response received (742 chars)
+[2025-05-01T01:39:34.677Z] Response sent to client (742 chars)
+[2025-05-01T01:39:38.347Z] Received query: "my head hurts"
+[2025-05-01T01:39:38.348Z] Calling Python RAG with query: "my head hurts"
+[2025-05-01T01:39:43.951Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my head hurts']
+DEBUG: Received query: my head hurts
+[2025-05-01T01:39:43.952Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T01:39:43.956Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query: my head hurts
+[2025-05-01T01:39:45.585Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-01T01:39:46.017Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T01:39:46.018Z] Python stdout: Sorry to hear that you're experiencing a headache. 
+
+A headache can be caused by a variety of factors, including physical trauma, such as a fall, which can lead to a contusion (bruise) on the brain. In some cases, a headache can be a symptom of a more serious condition, such as a concussion or a neurological disorder.
+
+It's important to note that only a qualified healthcare professional can determine the underlying cause of your headache. I recommend that you consult a doctor or a healthcare provider to get a proper evaluation and diagnosis.
+
+In the meantime, here are some general tips that may help alleviate your headache symptoms:
+
+1. Stay hydrated by drinking plenty of water.
+2. Avoid strenuous activities and get plenty of rest.
+3. Apply a cold compress or an ice pack to the affected area.
+4. Take over-the-counter pain relievers, such as acetaminophen or ibuprofen, as directed.
+
+Remember, if your headache is severe, persistent, or accompanied by other symptoms such as confusion, dizziness, or difficulty speaking, you should seek immediate medical attention.
+
+Please consult a healthcare professional for a proper evaluation and diagnosis.
+[2025-05-01T01:39:46.680Z] Python process exited with code 0
+[2025-05-01T01:39:46.680Z] RAG response received (1172 chars)
+[2025-05-01T01:39:46.681Z] Response sent to client (1172 chars)
+[2025-05-01T01:40:06.070Z] Received query: "test"
+[2025-05-01T01:40:06.071Z] Calling Python RAG with query: "test"
+[2025-05-01T01:40:12.001Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'test']
+DEBUG: Received query: test
+[2025-05-01T01:40:12.002Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T01:40:12.005Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-01T01:40:12.006Z] Python stderr: DEBUG: Processing query: test
+[2025-05-01T01:40:13.706Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-01T01:40:46.117Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T01:40:46.118Z] Python stdout: I'm SympAI, a virtual symptom assistant. I'm here to help you with your health concerns. Please note that I'm not a substitute for a real healthcare provider, and it's always best to consult a doctor for personalized diagnosis and treatment.
+
+It seems that you've provided some general clinical background information, which is helpful. However, I'd like to clarify that I'm not able to provide a diagnosis or treatment plan based on the information provided. I'm here to help you understand your symptoms and provide general information to support your healthcare journey.
+
+If you're experiencing symptoms, please feel free to describe them to me, and I'll do my best to provide general information and guidance. Remember to consult a real healthcare provider for a proper evaluation and treatment plan.
+
+Please go ahead and describe your symptoms, and I'll do my best to assist you.
+[2025-05-01T01:40:46.647Z] Python process exited with code 0
+[2025-05-01T01:40:46.648Z] RAG response received (890 chars)
+[2025-05-01T01:40:46.649Z] Response sent to client (890 chars)
+[2025-05-01T01:41:00.567Z] Received query: "test"
+[2025-05-01T01:41:00.568Z] Calling Python RAG with query: "test"
+[2025-05-01T01:41:06.306Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'test']
+DEBUG: Received query: test
+[2025-05-01T01:41:06.307Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T01:41:06.312Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+[2025-05-01T01:41:06.313Z] Python stderr: DEBUG: Using full RAG model
+DEBUG: Processing query: test
+[2025-05-01T01:41:07.978Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-01T01:41:08.296Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T01:41:08.296Z] Python stdout: I'm SympAI, a virtual symptom assistant. I'm here to help you with your health concerns. Please feel free to describe your symptoms, and I'll do my best to provide general information and guidance.
+
+However, I must remind you that I'm not a substitute for a real healthcare provider. If you're experiencing any symptoms, it's essential to consult a qualified healthcare professional for a proper diagnosis and treatment plan.
+
+Please refrain from sharing any personal health data or information that may be specific to your case. Instead, focus on describing your symptoms in general terms, and I'll do my best to provide helpful information and resources.
+
+Let's get started! What are your symptoms, and how have they been affecting you?
+[2025-05-01T01:41:08.861Z] Python process exited with code 0
+[2025-05-01T01:41:08.862Z] RAG response received (744 chars)
+[2025-05-01T01:41:08.863Z] Response sent to client (744 chars)
+[2025-05-01T01:41:22.421Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-01T01:41:22.423Z] Using RAG system from Python notebook for responses
+[2025-05-01T01:41:29.403Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-01T01:41:29.404Z] Using RAG system from Python notebook for responses
+[2025-05-01T01:41:44.093Z] Received query: "test"
+[2025-05-01T01:41:44.094Z] Calling Python RAG with query: "test"
+[2025-05-01T01:41:49.825Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'test']
+DEBUG: Received query: test
+[2025-05-01T01:41:49.826Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T01:41:49.829Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-01T01:41:49.830Z] Python stderr: DEBUG: Processing query: test
+[2025-05-01T01:41:51.584Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-01T01:41:52.067Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T01:41:52.067Z] Python stdout: I'm SympAI, your virtual symptom assistant. I'm here to help you with your health concerns. Please feel free to ask me any symptom-related questions you may have.
+
+Since you haven't asked a specific symptom-related question yet, I'd like to clarify that I'm here to provide general information and guidance. However, please keep in mind that I'm not a substitute for a real healthcare provider. If you're experiencing any symptoms or health concerns, it's essential to consult a qualified healthcare professional for personalized diagnosis and treatment.
+
+If you're ready to ask a symptom-related question, I'm here to help. Please go ahead and ask away!
+[2025-05-01T01:41:52.858Z] Python process exited with code 0
+[2025-05-01T01:41:52.859Z] RAG response received (658 chars)
+[2025-05-01T01:41:52.860Z] Response sent to client (658 chars)
+[2025-05-01T01:44:42.459Z] Received query: "test"
+[2025-05-01T01:44:42.459Z] Calling Python RAG with query: "test"
+[2025-05-01T01:44:48.218Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'test']
+DEBUG: Received query: test
+[2025-05-01T01:44:48.218Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T01:44:48.222Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query: test
+[2025-05-01T01:44:49.867Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-01T01:44:50.164Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T01:44:50.165Z] Python stdout: I'm SympAI, your virtual symptom assistant. I'm here to help you with your health concerns. Please feel free to describe your symptoms, and I'll do my best to provide general information and guidance.
+
+However, I must remind you that I'm not a substitute for a real healthcare provider. If you're experiencing any symptoms or concerns, it's essential to consult a qualified healthcare professional for a proper diagnosis and treatment plan.
+
+Please go ahead and describe your symptoms, and I'll do my best to assist you.
+[2025-05-01T01:44:50.697Z] Python process exited with code 0
+[2025-05-01T01:44:50.697Z] RAG response received (524 chars)
+[2025-05-01T01:44:50.698Z] Response sent to client (524 chars)
+[2025-05-01T02:01:57.100Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-01T02:01:57.102Z] Using RAG system from Python notebook for responses
+[2025-05-01T02:02:20.210Z] Received query: "test"
+[2025-05-01T02:02:20.211Z] Calling Python RAG with query: "test"
+[2025-05-01T02:02:25.910Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'test']
+DEBUG: Received query: test
+[2025-05-01T02:02:25.911Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T02:02:25.914Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-01T02:02:25.914Z] Python stderr: DEBUG: Processing query: test
+[2025-05-01T02:02:27.615Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-01T02:02:27.846Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T02:02:27.846Z] Python stdout: I'm here to help with your symptom-related health questions. Please feel free to ask about your symptoms, and I'll do my best to provide concise and helpful information.
+
+What's on your mind?
+[2025-05-01T02:02:28.337Z] Python process exited with code 0
+[2025-05-01T02:02:28.337Z] RAG response received (193 chars)
+[2025-05-01T02:02:28.338Z] Response sent to client (193 chars)
+[2025-05-01T02:02:34.985Z] Received query: "my head hurts"
+[2025-05-01T02:02:34.985Z] Calling Python RAG with query: "my head hurts"
+[2025-05-01T02:02:40.415Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my head hurts']
+DEBUG: Received query: my head hurts
+[2025-05-01T02:02:40.415Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T02:02:40.420Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query: my head hurts
+[2025-05-01T02:02:42.372Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-01T02:02:42.660Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T02:02:42.661Z] Python stdout: A headache can be caused by various factors, including tension, stress, or even a minor head injury. If you've recently experienced a head injury or fall, it's possible that your headache is related to a contusion or concussion.
+
+In this case, it's a good idea to seek medical attention to rule out any potential underlying conditions. A healthcare professional can assess your symptoms and perform a physical examination to determine the cause of your headache.
+
+If you're experiencing severe headache symptoms, such as severe pain, confusion, or difficulty speaking, seek immediate medical attention.
+
+Disclaimer: If you're concerned about your symptoms, please consult with a healthcare professional for proper evaluation and treatment.
+[2025-05-01T02:02:43.181Z] Python process exited with code 0
+[2025-05-01T02:02:43.181Z] RAG response received (745 chars)
+[2025-05-01T02:02:43.182Z] Response sent to client (745 chars)
+[2025-05-01T02:03:03.236Z] Received query: "do you want to hear a joke"
+[2025-05-01T02:03:03.237Z] Calling Python RAG with query: "do you want to hear a joke"
+[2025-05-01T02:03:08.705Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'do you want to hear a joke']
+DEBUG: Received query: do you want to hear a joke
+[2025-05-01T02:03:08.706Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T02:03:08.709Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-01T02:03:08.710Z] Python stderr: DEBUG: Processing query: do you want to hear a joke
+[2025-05-01T02:03:10.383Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-01T02:03:10.683Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T02:03:10.684Z] Python stdout: I'm happy to help with your health-related questions, but I'm not a joke-telling platform. If you have a symptom or health concern, I'd be happy to assist you. Please feel free to ask your question, and I'll do my best to provide a helpful response.
+
+Disclaimer: The information provided is for educational purposes only and should not be considered medical advice. Consult a qualified healthcare professional for personalized medical guidance.
+[2025-05-01T02:03:11.169Z] Python process exited with code 0
+[2025-05-01T02:03:11.169Z] RAG response received (446 chars)
+[2025-05-01T02:03:11.170Z] Response sent to client (446 chars)
+[2025-05-01T02:03:34.520Z] Received query: "my stomach is burning"
+[2025-05-01T02:03:34.520Z] Calling Python RAG with query: "my stomach is burning"
+[2025-05-01T02:03:39.972Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my stomach is burning']
+DEBUG: Received query: my stomach is burning
+[2025-05-01T02:03:39.972Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T02:03:39.976Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-01T02:03:39.976Z] Python stderr: DEBUG: Processing query: my stomach is burning
+[2025-05-01T02:03:41.745Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-01T02:03:42.302Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T02:03:42.303Z] Python stdout: A burning stomach sensation can be caused by various factors, including acid reflux, gastritis, or peptic ulcer disease. It's essential to identify the underlying cause to determine the appropriate treatment.
+
+If you're experiencing persistent or severe stomach pain, it's recommended to consult a healthcare professional for a proper evaluation and diagnosis.
+
+Disclaimer: If you're experiencing severe or persistent symptoms, please seek medical attention promptly.
+[2025-05-01T02:03:42.783Z] Python process exited with code 0
+[2025-05-01T02:03:42.784Z] RAG response received (471 chars)
+[2025-05-01T02:03:42.785Z] Response sent to client (471 chars)
+[2025-05-01T02:07:14.401Z] Received query: "it also burns"
+[2025-05-01T02:07:14.402Z] Calling Python RAG with query: "it also burns"
+[2025-05-01T02:07:20.096Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'it also burns']
+DEBUG: Received query: it also burns
+[2025-05-01T02:07:20.096Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T02:07:20.101Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query: it also burns
+[2025-05-01T02:07:21.802Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-01T02:07:22.126Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T02:07:22.127Z] Python stdout: Based on your symptoms, it sounds like you may have suffered a burn injury, specifically first- and second-degree burns on your right arm. Burns can be caused by various factors, including hot liquids or objects. The burning sensation you're experiencing is likely due to the damage to the skin and underlying tissues.
+
+It's essential to seek medical attention as soon as possible to ensure proper treatment and prevent infection. A healthcare professional can assess the extent of the burn, clean and dress the wound, and provide guidance on pain management and wound care.
+
+Disclaimer: If you are experiencing severe burns or other life-threatening symptoms, please seek immediate medical attention.
+[2025-05-01T02:07:22.625Z] Python process exited with code 0
+[2025-05-01T02:07:22.626Z] RAG response received (705 chars)
+[2025-05-01T02:07:22.626Z] Response sent to client (705 chars)
+[2025-05-01T03:14:33.221Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-01T03:14:33.223Z] Using RAG system from Python notebook for responses
+[2025-05-01T03:15:11.183Z] Received query: "My head hurts"
+[2025-05-01T03:15:11.183Z] Calling Python RAG with query: "My head hurts"
+[2025-05-01T03:15:17.178Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'My head hurts']
+DEBUG: Received query: My head hurts with conversation ID: None
+[2025-05-01T03:15:17.179Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T03:15:17.183Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+[2025-05-01T03:15:17.183Z] Python stderr: DEBUG: Using full RAG model
+DEBUG: Processing query: My head hurts with conversation ID: None
+DEBUG: Created new conversation with ID: 1e3a4c1f-aa98-4a9a-a05f-c57999eb3cff
+[2025-05-01T03:15:19.187Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API with conversation history
+[2025-05-01T03:15:20.206Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T03:15:20.207Z] Python stdout: {"response": "A headache can be a concerning symptom! Given your report of a headache, I'd like to explore some possible causes. Since you mentioned no other symptoms, I'll focus on the most common causes.\n\nA headache can be caused by a variety of factors, including dehydration, stress, or muscle tension. However, considering your mention of a head injury and fall, it's possible that your headache might be related to a concussion or a contusion of the frontal lobe of the brain.\n\nIf you're experiencing a headache after a head injury, it's essential to seek medical attention to rule out any potential complications. Your healthcare provider may perform a physical exam, take a detailed medical history, and order imaging tests (such as a CT or MRI scan) to assess the severity of the injury.\n\nPlease provide more information about your headache, such as its severity, duration, and any triggers you've noticed. This will help me better understand your symptoms and provide more tailored guidance.", "conversation_id": "1e3a4c1f-aa98-4a9a-a05f-c57999eb3cff"}
+[2025-05-01T03:15:20.690Z] Python process exited with code 0
+[2025-05-01T03:15:20.690Z] RAG response received (1068 chars)
+[2025-05-01T03:15:20.691Z] Response sent to client (1068 chars)
+[2025-05-01T03:16:10.635Z] Received query: "yea no the headache isn't too bad but what should I do? Is advil good or ibiprophen better?"
+[2025-05-01T03:16:10.636Z] Calling Python RAG with query: "yea no the headache isn't too bad but what should I do? Is advil good or ibiprophen better?"
+[2025-05-01T03:16:16.102Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', "yea no the headache isn't too bad but what should I do? Is advil good or ibiprophen better?"]
+DEBUG: Received query: yea no the headache isn't too bad but what should I do? Is advil good or ibiprophen better? with conversation ID: None
+[2025-05-01T03:16:16.103Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T03:16:16.106Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+[2025-05-01T03:16:16.106Z] Python stderr: DEBUG: Using full RAG model
+DEBUG: Processing query: yea no the headache isn't too bad but what should I do? Is advil good or ibiprophen better? with conversation ID: None
+DEBUG: Created new conversation with ID: bcb460a3-ebad-4a37-9435-4a7243702746
+[2025-05-01T03:16:17.928Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API with conversation history
+[2025-05-01T03:16:18.271Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T03:16:18.274Z] Python stdout: {"response": "For a mild headache, over-the-counter pain relievers like Advil (ibuprofen) or ibuprofen can be effective. Both are available in various strengths and formulations. If you're unsure which one to take, you can start with a low dose of ibuprofen (200-400mg) and see how your body responds. If the headache persists or worsens, you may want to consider acetaminophen (Tylenol) as an alternative. Always follow the recommended dosage and consult with your healthcare provider if the headache persists or is accompanied by other concerning symptoms.", "conversation_id": "bcb460a3-ebad-4a37-9435-4a7243702746"}
+[2025-05-01T03:16:18.758Z] Python process exited with code 0
+[2025-05-01T03:16:18.759Z] RAG response received (619 chars)
+[2025-05-01T03:16:18.759Z] Response sent to client (619 chars)
+[2025-05-01T03:16:39.417Z] Received query: "yeah ok which one is better"
+[2025-05-01T03:16:39.417Z] Calling Python RAG with query: "yeah ok which one is better"
+[2025-05-01T03:16:44.905Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'yeah ok which one is better']
+DEBUG: Received query: yeah ok which one is better with conversation ID: None
+[2025-05-01T03:16:44.906Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T03:16:44.909Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-01T03:16:44.909Z] Python stderr: DEBUG: Processing query: yeah ok which one is better with conversation ID: None
+DEBUG: Created new conversation with ID: a7023066-2e9f-4920-ace5-1fb578723980
+[2025-05-01T03:16:46.722Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API with conversation history
+[2025-05-01T03:16:47.462Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T03:16:47.463Z] Python stdout: {"response": "I'm happy to help you with your symptom-related question! However, I must politely decline as it seems you're not presenting a specific symptom or health concern. The text you provided appears to be related to medical procedures or terminology, but not a symptom or health issue. If you could rephrase your question or provide more context about your concern, I'll do my best to assist you.", "conversation_id": "a7023066-2e9f-4920-ace5-1fb578723980"}
+[2025-05-01T03:16:47.947Z] Python process exited with code 0
+[2025-05-01T03:16:47.947Z] RAG response received (465 chars)
+[2025-05-01T03:16:47.948Z] Response sent to client (465 chars)
+[2025-05-01T19:35:23.441Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-01T19:35:23.444Z] Using RAG system from Python notebook for responses
+[2025-05-01T19:35:39.595Z] Received query: "my head hurts"
+[2025-05-01T19:35:39.596Z] Calling Python RAG with query: "my head hurts"
+[2025-05-01T19:36:16.280Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my head hurts']
+DEBUG: Received query: my head hurts
+[2025-05-01T19:36:16.281Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T19:36:16.298Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query: my head hurts
+[2025-05-01T19:36:19.932Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-01T19:36:20.408Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T19:36:20.409Z] Python stdout: A headache can be caused by various factors, including stress, fatigue, or even a head injury. If you've recently experienced a fall or had a head injury, it's possible that your headache is related to a contusion (bruise) on the brain. In this case, it's essential to seek medical attention to rule out any underlying conditions.
+
+If you're experiencing a severe headache, nausea, vomiting, or difficulty speaking, seek immediate medical attention.
+
+Disclaimer: If you're experiencing a severe headache or concerning symptoms, please consult a healthcare professional for a proper evaluation and diagnosis.
+[2025-05-01T19:36:20.956Z] Python process exited with code 0
+[2025-05-01T19:36:20.957Z] RAG response received (611 chars)
+[2025-05-01T19:36:20.959Z] Response sent to client (611 chars)
+[2025-05-01T19:37:35.821Z] Received query: "my head hurts"
+[2025-05-01T19:37:35.822Z] Calling Python RAG with query: "my head hurts"
+[2025-05-01T19:37:41.315Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my head hurts']
+DEBUG: Received query: my head hurts
+[2025-05-01T19:37:41.316Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T19:37:41.319Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-01T19:37:41.319Z] Python stderr: DEBUG: Processing query: my head hurts
+[2025-05-01T19:37:43.059Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-01T19:37:43.394Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T19:37:43.395Z] Python stdout: A headache can be caused by various factors. If you've recently experienced a head injury or fall, it's possible that the headache is related to a concussion or contusion. In this case, it's essential to seek medical attention to rule out any underlying conditions.
+
+If you're experiencing a headache, try to identify any triggers, such as stress, fatigue, or certain foods. You can also try over-the-counter pain relievers like acetaminophen or ibuprofen. However, if your headache is severe, persistent, or accompanied by other symptoms like confusion, dizziness, or difficulty speaking, seek medical attention immediately.
+
+Disclaimer: If you're experiencing a severe headache or have concerns about your symptoms, please consult a healthcare professional for proper evaluation and treatment.
+[2025-05-01T19:37:43.905Z] Python process exited with code 0
+[2025-05-01T19:37:43.906Z] RAG response received (799 chars)
+[2025-05-01T19:37:43.907Z] Response sent to client (799 chars)
+[2025-05-01T19:45:01.373Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-01T19:45:01.375Z] Using RAG system from Python notebook for responses
+[2025-05-01T19:45:12.291Z] Received query: "my head hurtsd"
+[2025-05-01T19:45:12.292Z] Calling Python RAG with query: "my head hurtsd"
+[2025-05-01T19:45:17.868Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my head hurtsd']
+DEBUG: Received query: my head hurtsd with conversation ID: None
+[2025-05-01T19:45:17.868Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T19:45:17.871Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-01T19:45:17.872Z] Python stderr: DEBUG: Processing query: my head hurtsd with conversation ID: None
+DEBUG: Created new conversation with ID: 6b97755e-44da-446f-8776-c4f3a2f403d8
+[2025-05-01T19:45:19.620Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API with conversation history
+[2025-05-01T19:45:20.989Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T19:45:20.991Z] Python stdout: {"response": "Sorry to hear that your head hurts. There are many possible causes of headaches, and it's always a good idea to try to identify the underlying cause. Can you tell me more about your headache? Is it a sharp pain, a dull ache, or a feeling of pressure? Is it located on one side of your head, or is it all over? Have you experienced any other symptoms, such as sensitivity to light or noise, nausea, or vomiting?", "conversation_id": "6b97755e-44da-446f-8776-c4f3a2f403d8"}
+[2025-05-01T19:45:21.527Z] Python process exited with code 0
+[2025-05-01T19:45:21.528Z] RAG response received (485 chars)
+[2025-05-01T19:45:21.529Z] Response sent to client (485 chars)
+[2025-05-01T19:45:28.952Z] Received query: "its a dull pain"
+[2025-05-01T19:45:28.953Z] Calling Python RAG with query: "its a dull pain"
+[2025-05-01T19:45:34.460Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'its a dull pain']
+DEBUG: Received query: its a dull pain with conversation ID: None
+[2025-05-01T19:45:34.460Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T19:45:34.463Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-01T19:45:34.464Z] Python stderr: DEBUG: Processing query: its a dull pain with conversation ID: None
+DEBUG: Created new conversation with ID: 314c1fd5-4fcc-43f2-8a54-a95a80728a8a
+[2025-05-01T19:45:36.135Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API with conversation history
+[2025-05-01T19:45:36.444Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T19:45:36.446Z] Python stdout: {"response": "A dull pain in the upper outer arm, occurring daily, with an achy sensation in the right hand radiating to the fingers. This could be related to various conditions. Given the symptoms, I would recommend considering potential musculoskeletal or neural issues, such as strain or inflammation in the shoulder or arm, or possibly a referred pain from the neck or thoracic spine. It's also possible that this could be related to a condition like fibromyalgia or thoracic outlet syndrome. Can you tell me more about the pain? Is it constant or does it come and go? Are there any triggers or factors that make it better or worse?", "conversation_id": "314c1fd5-4fcc-43f2-8a54-a95a80728a8a"}
+[2025-05-01T19:45:36.952Z] Python process exited with code 0
+[2025-05-01T19:45:36.953Z] RAG response received (697 chars)
+[2025-05-01T19:45:36.954Z] Response sent to client (697 chars)
+[2025-05-01T19:52:47.578Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-01T19:52:47.579Z] Using RAG system from Python notebook for responses
+[2025-05-01T19:52:56.572Z] Received query: "My head hurts"
+[2025-05-01T19:52:56.572Z] Calling Python RAG with query: "My head hurts"
+[2025-05-01T19:53:02.117Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'My head hurts']
+DEBUG: Received query: My head hurts
+[2025-05-01T19:53:02.118Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T19:53:02.121Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+[2025-05-01T19:53:02.121Z] Python stdout: Error: API key not found. Please set the GROQ_API_KEY environment variable.
+[2025-05-01T19:53:02.122Z] Python stderr: DEBUG: GROQ_API_KEY not found in environment variables
+DEBUG: Failed to load config file
+DEBUG: Critical error: API key not found. Please set the GROQ_API_KEY environment variable.
+[2025-05-01T19:53:02.589Z] Python process exited with code 1
+[2025-05-01T19:53:02.589Z] Error: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'My head hurts']
+DEBUG: Received query: My head hurts
+DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: GROQ_API_KEY not found in environment variables
+DEBUG: Failed to load config file
+DEBUG: Critical error: API key not found. Please set the GROQ_API_KEY environment variable.
+
+[2025-05-01T19:53:02.590Z] Using fallback response for: "My head hurts"
+[2025-05-01T19:53:02.590Z] Response sent to client (353 chars)
+[2025-05-01T19:53:10.259Z] Received query: "what should I do?"
+[2025-05-01T19:53:10.260Z] Calling Python RAG with query: "what should I do?"
+[2025-05-01T19:53:15.912Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'what should I do?']
+DEBUG: Received query: what should I do?
+[2025-05-01T19:53:15.913Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T19:53:15.916Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+[2025-05-01T19:53:15.916Z] Python stdout: Error: API key not found. Please set the GROQ_API_KEY environment variable.
+[2025-05-01T19:53:15.917Z] Python stderr: DEBUG: GROQ_API_KEY not found in environment variables
+DEBUG: Failed to load config file
+DEBUG: Critical error: API key not found. Please set the GROQ_API_KEY environment variable.
+[2025-05-01T19:53:16.487Z] Python process exited with code 1
+[2025-05-01T19:53:16.488Z] Error: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'what should I do?']
+DEBUG: Received query: what should I do?
+DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: GROQ_API_KEY not found in environment variables
+DEBUG: Failed to load config file
+DEBUG: Critical error: API key not found. Please set the GROQ_API_KEY environment variable.
+
+[2025-05-01T19:53:16.488Z] Using fallback response for: "what should I do?"
+[2025-05-01T19:53:16.489Z] Response sent to client (353 chars)
+[2025-05-01T19:53:24.161Z] Received query: "i have joint pain and my head is hurting"
+[2025-05-01T19:53:24.162Z] Calling Python RAG with query: "i have joint pain and my head is hurting"
+[2025-05-01T19:53:29.654Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'i have joint pain and my head is hurting']
+DEBUG: Received query: i have joint pain and my head is hurting
+[2025-05-01T19:53:29.655Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T19:53:29.658Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+[2025-05-01T19:53:29.658Z] Python stdout: Error: API key not found. Please set the GROQ_API_KEY environment variable.
+[2025-05-01T19:53:29.658Z] Python stderr: DEBUG: GROQ_API_KEY not found in environment variables
+DEBUG: Failed to load config file
+DEBUG: Critical error: API key not found. Please set the GROQ_API_KEY environment variable.
+[2025-05-01T19:53:30.138Z] Python process exited with code 1
+[2025-05-01T19:53:30.138Z] Error: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'i have joint pain and my head is hurting']
+DEBUG: Received query: i have joint pain and my head is hurting
+DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: GROQ_API_KEY not found in environment variables
+DEBUG: Failed to load config file
+DEBUG: Critical error: API key not found. Please set the GROQ_API_KEY environment variable.
+
+[2025-05-01T19:53:30.138Z] Using fallback response for: "i have joint pain and my head is hurting"
+[2025-05-01T19:53:30.139Z] Response sent to client (353 chars)
+[2025-05-01T19:53:39.614Z] Received query: "my head hurts"
+[2025-05-01T19:53:39.615Z] Calling Python RAG with query: "my head hurts"
+[2025-05-01T19:53:45.598Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my head hurts']
+DEBUG: Received query: my head hurts
+[2025-05-01T19:53:45.599Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T19:53:45.603Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query: my head hurts
+[2025-05-01T19:53:47.452Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-01T19:53:48.040Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T19:53:48.040Z] Python stdout: A headache can be caused by various factors. If you've experienced a recent head injury or fall, it's possible that your headache is related to a contusion or concussion. However, without a thorough evaluation, it's difficult to determine the exact cause.
+
+If your headache is severe, worsening, or accompanied by other symptoms such as confusion, nausea, or vomiting, seek medical attention. For a mild headache, you can try over-the-counter pain relievers like acetaminophen or ibuprofen. Rest, hydration, and a cold compress may also help alleviate symptoms.
+
+Remember to consult a healthcare professional if your symptoms persist or worsen.
+
+Disclaimer: This response is for informational purposes only and should not be considered medical advice. If you're experiencing a severe or persistent headache, please consult a healthcare professional for proper evaluation and treatment.
+[2025-05-01T19:53:48.666Z] Python process exited with code 0
+[2025-05-01T19:53:48.667Z] RAG response received (891 chars)
+[2025-05-01T19:53:48.668Z] Response sent to client (891 chars)
+[2025-05-01T19:58:38.762Z] Received query: "My head hurts, I woke up this morning with head pain what should I do?"
+[2025-05-01T19:58:38.763Z] Calling Python RAG with query: "My head hurts, I woke up this morning with head pain what should I do?"
+[2025-05-01T19:58:44.636Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'My head hurts, I woke up this morning with head pain what should I do?']
+DEBUG: Received query: My head hurts, I woke up this morning with head pain what should I do?
+[2025-05-01T19:58:44.636Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T19:58:44.639Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query: My head hurts, I woke up this morning with head pain what should I do?
+[2025-05-01T19:58:55.470Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-01T19:58:55.794Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T19:58:55.795Z] Python stdout: Sorry to hear that you're experiencing a headache. Waking up with head pain can be concerning, but it's often not a cause for immediate alarm. Here are some steps you can take:
+
+1. Stay hydrated by drinking plenty of water or other fluids.
+2. Take over-the-counter pain relievers like acetaminophen or ibuprofen as directed.
+3. Try relaxation techniques like deep breathing, meditation, or a warm bath to reduce stress.
+4. If your headache is severe, worsens, or is accompanied by other symptoms like fever, confusion, or difficulty speaking, seek medical attention.
+
+Remember to consult with a healthcare professional if your headache persists or worsens.
+
+Disclaimer: This response is not intended to replace medical advice. If you're experiencing severe or persistent symptoms, please seek medical attention.
+[2025-05-01T19:58:56.397Z] Python process exited with code 0
+[2025-05-01T19:58:56.398Z] RAG response received (820 chars)
+[2025-05-01T19:58:56.399Z] Response sent to client (820 chars)
+[2025-05-01T19:59:41.553Z] Received query: "Okay also my legs are throbbing"
+[2025-05-01T19:59:41.553Z] Calling Python RAG with query: "Okay also my legs are throbbing"
+[2025-05-01T19:59:47.733Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'Okay also my legs are throbbing']
+DEBUG: Received query: Okay also my legs are throbbing
+[2025-05-01T19:59:47.734Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T19:59:47.737Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-01T19:59:47.737Z] Python stderr: DEBUG: Processing query: Okay also my legs are throbbing
+[2025-05-01T19:59:49.670Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-01T19:59:49.994Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T19:59:49.994Z] Python stdout: The combination of a throbbing sensation in your legs, along with the previous mention of leg pain, suggests a possible musculoskeletal issue. The radiating pain from the buttocks to the legs, including the ankle, is a common pattern seen in conditions such as sciatica or piriformis syndrome.
+
+It's essential to consult with a healthcare professional to determine the underlying cause of your symptoms. They will likely perform a physical examination, take a detailed medical history, and may order imaging tests or other diagnostic tools to help identify the source of your discomfort.
+
+Disclaimer: This response is intended to provide general information and should not be considered medical advice. If you are experiencing symptoms, please consult with a qualified healthcare professional for an accurate diagnosis and appropriate treatment.
+[2025-05-01T19:59:50.666Z] Python process exited with code 0
+[2025-05-01T19:59:50.666Z] RAG response received (849 chars)
+[2025-05-01T19:59:50.667Z] Response sent to client (849 chars)
+[2025-05-01T21:31:30.260Z] Received query: "my head hurts"
+[2025-05-01T21:31:30.262Z] Calling Python RAG with query: "my head hurts"
+[2025-05-01T21:31:37.209Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my head hurts']
+DEBUG: Received query: my head hurts
+[2025-05-01T21:31:37.209Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-01T21:31:37.213Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-01T21:31:37.214Z] Python stderr: DEBUG: Processing query: my head hurts
+[2025-05-01T21:31:39.176Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-01T21:31:39.610Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-01T21:31:39.611Z] Python stdout: A headache can be caused by various factors. If you've recently experienced a head injury or fall, it's possible that it may be related to a contusion or concussion. In this case, it's essential to seek medical attention to rule out any underlying conditions.
+
+If you're experiencing a severe headache, accompanied by other symptoms such as dizziness, confusion, or difficulty speaking, seek immediate medical attention.
+
+If your headache is mild to moderate, you can try over-the-counter pain relievers such as acetaminophen or ibuprofen. However, if the pain persists or worsens, it's recommended to consult with a healthcare professional for further evaluation.
+
+Disclaimer: If you're experiencing a severe headache or other concerning symptoms, please seek immediate medical attention.
+[2025-05-01T21:31:40.158Z] Python process exited with code 0
+[2025-05-01T21:31:40.159Z] RAG response received (795 chars)
+[2025-05-01T21:31:40.160Z] Response sent to client (795 chars)
+[2025-05-01T21:34:07.594Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-01T21:34:07.596Z] Using RAG system from Python notebook for responses
