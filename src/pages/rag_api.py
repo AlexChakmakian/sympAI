@@ -200,14 +200,13 @@ def ask_sympai(user_input, index, medical_corpus):
             "You ONLY respond to symptom-related health questions with concise, helpful information. "
             "You must not impersonate any patient or assume personal health data. "
             "Use the clinical background to inform your responses without directly citing it. "
-            "Include a single, brief healthcare disclaimer at the end of your response. "
             "Keep responses under 200 words when possible. "
             "Politely decline non-medical requests."
         )
         
         user_prompt = (
             f"{user_input}\n\n"
-            f"Remember to be concise and include only one brief medical disclaimer at the end of your response."
+            f"Remember to be concise."
             f"{context_block}"
         )
         

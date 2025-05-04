@@ -654,3 +654,56 @@ Disclaimer: This response is for general information purposes only and should no
 [2025-05-02T00:09:17.543Z] Python process exited with code 0
 [2025-05-02T00:09:17.544Z] RAG response received (749 chars)
 [2025-05-02T00:09:17.545Z] Response sent to client (749 chars)
+[2025-05-03T04:14:22.767Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-03T04:14:22.768Z] Using RAG system from Python notebook for responses
+[2025-05-03T04:19:57.251Z] Received query: "test"
+[2025-05-03T04:19:57.251Z] Calling Python RAG with query: "test"
+[2025-05-03T04:20:16.380Z] Received query: "test"
+[2025-05-03T04:20:16.381Z] Calling Python RAG with query: "test"
+[2025-05-03T04:20:34.877Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'test']
+DEBUG: Received query: test
+[2025-05-03T04:20:34.877Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'test']
+DEBUG: Received query: test
+DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-03T04:20:34.878Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-03T04:20:34.901Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query: test
+[2025-05-03T04:20:34.902Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query: test
+[2025-05-03T04:20:38.373Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-03T04:20:38.374Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-03T04:20:39.019Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-03T04:20:39.019Z] Python stdout: I'm SympAI, your virtual symptom assistant. I'm here to help you with your health concerns. Please feel free to ask me any symptom-related questions, and I'll do my best to provide you with concise and helpful information.
+
+If you're ready, what's your symptom or concern?
+[2025-05-03T04:20:39.035Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-03T04:20:39.036Z] Python stdout: I'm SympAI, your virtual symptom assistant. I'm here to help with your health concerns. Please describe your symptoms, and I'll provide you with concise and helpful information.
+[2025-05-03T04:20:39.687Z] Python process exited with code 0
+[2025-05-03T04:20:39.687Z] RAG response received (177 chars)
+[2025-05-03T04:20:39.689Z] Response sent to client (177 chars)
+[2025-05-03T04:20:39.694Z] Python process exited with code 0
+[2025-05-03T04:20:39.694Z] RAG response received (274 chars)
+[2025-05-03T04:20:39.695Z] Response sent to client (274 chars)
+[2025-05-03T04:20:57.735Z] Received query: "my tooth is hurting bad and I have a fever"
+[2025-05-03T04:20:57.735Z] Calling Python RAG with query: "my tooth is hurting bad and I have a fever"
+[2025-05-03T04:21:03.102Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my tooth is hurting bad and I have a fever']
+DEBUG: Received query: my tooth is hurting bad and I have a fever
+[2025-05-03T04:21:03.102Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-03T04:21:03.105Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-03T04:21:03.106Z] Python stderr: DEBUG: Processing query: my tooth is hurting bad and I have a fever
+[2025-05-03T04:21:04.777Z] Python stderr: DEBUG: Retrieved 3 documents
+DEBUG: Sending request to Groq API
+[2025-05-03T04:21:05.235Z] Python stderr: DEBUG: Successfully received response from Groq API
+[2025-05-03T04:21:05.235Z] Python stdout: Sorry to hear that you're experiencing tooth pain and a fever. Based on your symptoms, it's possible that you may have an infection or abscess in your tooth or surrounding tissue. This could be causing the pain and fever.
+
+I recommend that you visit a dentist or an emergency room to get evaluated and treated. They will likely perform a physical examination, take X-rays, and possibly take a sample of the affected area to determine the cause of the infection.
+
+In the meantime, you can try to manage your symptoms by taking over-the-counter pain relievers such as acetaminophen or ibuprofen, and rinsing your mouth with warm salt water several times a day. However, it's essential to get proper medical attention to prevent the infection from spreading and causing more severe complications.
+[2025-05-03T04:21:05.764Z] Python process exited with code 0
+[2025-05-03T04:21:05.765Z] RAG response received (797 chars)
+[2025-05-03T04:21:05.766Z] Response sent to client (797 chars)
