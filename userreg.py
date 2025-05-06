@@ -1,6 +1,7 @@
 from flask import Blueprint, request, jsonify
 from werkzeug.security import generate_password_hash, check_password_hash
 from users import db, User
+from chat import Chat
 
 routes = Blueprint('routes', __name__)
 
@@ -36,7 +37,7 @@ def login():
         return jsonify({'error': 'No account found with that email. Please input a valid email or register first.'}), 404
     
     if not check_password_hash(user.password, password):
-        return jsonify({'error': 'Incorrect password. Please try again.'})
+        return jsonify({'error': 'Incorrect password. Please try again.'}), 401
     
     username = user.email.split('@')[0]
     return jsonify({
@@ -47,3 +48,41 @@ def login():
             'email': user.email
         }
     }), 200
+
+@routes.route('/chat-history', methods=['POST'])
+def save_chat():
+    data = request.get_json()
+    user_id = data.get('user_id')
+    message = data.get('message')
+    response = data.get('response')
+
+    if not all([user_id, message, response]):
+        return jsonify({'error': 'Missing data'}), 400
+
+    try:
+        new_chat = Chat(user_id=user_id, message=message, response=response)
+        db.session.add(new_chat)
+        db.session.commit()
+        return jsonify({'message': 'Chat saved successfully'}), 201
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'error': str(e)}), 500
+
+@routes.route('/chat-history/<int:user_id>', methods=['GET'])
+def get_chat_history(user_id):
+    try:
+        chats = Chat.query.filter_by(user_id=user_id).order_by(Chat.timestamp).all()
+
+        chat_list = [
+            {
+                'message': chat.message,
+                'response': chat.response,
+                'timestamp': chat.timestamp.strftime("%Y-%m-%d %H:%M:%S")
+            }
+            for chat in chats
+        ]
+
+        return jsonify({'chat_history': chat_list}), 200
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
