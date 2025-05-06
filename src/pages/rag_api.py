@@ -184,7 +184,7 @@ def ask_sympai(user_input, index, medical_corpus):
         debug_log(f"Processing query: {user_input}")
         
         # Initialize Groq client
-        client = Groq(api_key="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")
+        client = Groq(api_key="")
         
         # Retrieve relevant medical context
         context = retrieve_context(user_input, index, medical_corpus)
