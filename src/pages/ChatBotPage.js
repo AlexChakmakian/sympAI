@@ -1,29 +1,29 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './ChatBotPage.css';
 
-// Microphone SVG icon componentg
+// Microphone SVG icon component
 const MicIcon = ({ active }) => (
   <svg 
     className={`mic-icon ${active ? 'active' : ''}`} 
     xmlns="http://www.w3.org/2000/svg" 
     viewBox="0 0 24 24" 
-    width="15"
-    height="15"
+    width="12"
+    height="12"
     fill="none" 
     stroke="currentColor" 
-    strokeWidth="1.5" 
+    strokeWidth="2" 
     strokeLinecap="round" 
     strokeLinejoin="round"
     style={{ 
-      maxWidth: '18px', 
-      maxHeight: '18px',
-      display: 'block'  // Ensures proper sizing
+      maxWidth: '14px', 
+      maxHeight: '14px',
+      display: 'block'
     }}
   >
-    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
-    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-    <line x1="12" y1="19" x2="12" y2="23"></line>
-    <line x1="8" y1="23" x2="16" y2="23"></line>
+    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z" />
+    <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+    <line x1="12" y1="19" x2="12" y2="22" />
+    <line x1="9" y1="22" x2="15" y2="22" />
   </svg>
 );
 
@@ -279,44 +279,46 @@ function ChatBotPage() {
 
         <form 
           onSubmit={handleSendMessage} 
-          className={`message-input ${supportsSpeech ? 'with-speech-button' : ''}`}
+          className={`message-input-modern ${supportsSpeech ? 'with-speech-button' : ''}`}
         >
-          {supportsSpeech && (
-            <button 
-              type="button" 
-              className={`speech-button ${isListening ? 'active' : ''}`} 
-              onClick={toggleSpeechRecognition}
-              aria-label={isListening ? 'Stop listening' : 'Start speech recognition'}
-              disabled={isLoading}
-            >
-              <MicIcon active={isListening} />
-            </button>
-          )}
-          
-          <input
-            ref={inputRef}
-            type="text"
-            value={inputText}
-            onChange={(e) => setInputText(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder={isListening ? 'Listening...' : 'Describe your symptoms...'}
-            disabled={isLoading || isListening}
-            aria-label="Message input"
-          />
-          
-          <button 
-            type="submit" 
-            disabled={isLoading || !inputText.trim()} 
-            aria-label="Send message"
-          >
-            {isLoading ? (
-              <span className="typing-indicator">
-                <span></span><span></span><span></span>
-              </span>
-            ) : (
-              <SendIcon />
+          <div className="input-bar">
+            {supportsSpeech && (
+              <button 
+                type="button" 
+                className={`speech-button-modern ${isListening ? 'active' : ''}`} 
+                onClick={toggleSpeechRecognition}
+                aria-label={isListening ? 'Stop listening' : 'Start speech recognition'}
+                disabled={isLoading}
+              >
+                <MicIcon active={isListening} />
+              </button>
             )}
-          </button>
+            <input
+              ref={inputRef}
+              type="text"
+              value={inputText}
+              onChange={(e) => setInputText(e.target.value)}
+              onKeyDown={handleKeyDown}
+              placeholder={isListening ? 'Listening...' : 'Describe your symptoms...'}
+              disabled={isLoading || isListening}
+              aria-label="Message input"
+              className="modern-input"
+            />
+            <button 
+              type="submit" 
+              className="send-button-modern"
+              disabled={isLoading || !inputText.trim()} 
+              aria-label="Send message"
+            >
+              {isLoading ? (
+                <span className="typing-indicator">
+                  <span></span><span></span><span></span>
+                </span>
+              ) : (
+                <SendIcon />
+              )}
+            </button>
+          </div>
         </form>
         
         <div className="disclaimer">
