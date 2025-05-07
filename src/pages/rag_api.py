@@ -20,17 +20,32 @@ except ImportError as e:
     print(f"Import error: {e}", file=sys.stderr)
     IMPORTS_SUCCEEDED = False
 
+# Path settings
+MODEL_DIR = os.path.dirname(os.path.abspath(__file__))
+FAISS_INDEX_PATH = os.path.join(MODEL_DIR, 'medical_faiss_index.bin')
+CORPUS_DATA_PATH = os.path.join(MODEL_DIR, 'medical_corpus_data.pkl')
+CSV_PATH = os.path.join(MODEL_DIR, 'mtsamples.csv')
+HISTORY_PATH = os.path.join(MODEL_DIR, 'session_history.json')
+
+
+SESSION_HISTORY = []
+
+def load_session_history():
+    if os.path.exists(HISTORY_PATH):
+        with open(HISTORY_PATH, 'r') as f:
+            return json.load(f)
+    return []
+
+def save_session_history(history):
+    with open(HISTORY_PATH, 'w') as f:
+        json.dump(history, f)
+
+
 # For debugging and tracing execution
 DEBUG = True
 def debug_log(message):
     if DEBUG:
         print(f"DEBUG: {message}", file=sys.stderr)
-
-# Path settings
-MODEL_DIR = os.path.dirname(os.path.abspath(__file__))
-FAISS_INDEX_PATH = os.path.join(MODEL_DIR, 'medical_faiss_index.bin') 
-CORPUS_DATA_PATH = os.path.join(MODEL_DIR, 'medical_corpus_data.pkl')
-CSV_PATH = os.path.join(MODEL_DIR, 'mtsamples.csv')
 
 # Fallback data if we can't find the dataset
 FALLBACK_DATA = [
@@ -178,23 +193,14 @@ def retrieve_context(query, index, medical_corpus, k=3):
         debug_log(f"Error in retrieve_context: {e}")
         return FALLBACK_DATA[:k]
 
-def ask_sympai(user_input, index, medical_corpus):
-    """Main RAG function that combines retrieval and generation"""
+def ask_sympai(user_input, index, medical_corpus, session_history):
     try:
-        debug_log(f"Processing query: {user_input}")
-        
-        # Initialize Groq client
+        debug_log(f"Processing query with history: {user_input}")
         client = Groq(api_key="")
         
-        # Retrieve relevant medical context
         context = retrieve_context(user_input, index, medical_corpus)
-        
-        # Format the context block
         context_block = "\n\nGENERAL CLINICAL BACKGROUND:\n" + "\n\n---\n\n".join(context)
         
-        debug_log("Sending request to Groq API")
-        
-        # Improved system prompt for more concise responses
         system_prompt = (
             "You are SympAI, a virtual symptom assistant. "
             "You ONLY respond to symptom-related health questions with concise, helpful information. "
@@ -203,41 +209,31 @@ def ask_sympai(user_input, index, medical_corpus):
             "Keep responses under 200 words when possible. "
             "Politely decline non-medical requests."
         )
+
+        # Construct chat history messages
+        messages = [{"role": "system", "content": system_prompt}]
+        for pair in session_history:
+            messages.append({"role": "user", "content": pair["user"]})
+            messages.append({"role": "assistant", "content": pair["assistant"]})
         
-        user_prompt = (
-            f"{user_input}\n\n"
-            f"Remember to be concise."
-            f"{context_block}"
-        )
-        
-        messages = [
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_prompt}
-        ]
-        
-        # Get response from Groq
+        # Append the new user message with medical context
+        messages.append({"role": "user", "content": f"{user_input}\n\n{context_block}"})
+
         response = client.chat.completions.create(
             model="llama3-8b-8192",
             messages=messages,
             temperature=0.4,
             max_tokens=600
         )
-        
-        result = response.choices[0].message.content
-        debug_log("Successfully received response from Groq API")
+
+        result = response.choices[0].message.content.strip()
+        session_history.append({"user": user_input, "assistant": result})
         return result
+
     except Exception as e:
         debug_log(f"Error in ask_sympai: {e}")
-        
-        # For school project demo purposes, provide a useful fallback rather than an error
-        if "head" in user_input.lower():
-            return "Headaches can have various causes ranging from tension and stress to more serious conditions. Common types include tension headaches, migraines, and cluster headaches. Symptoms may vary from dull pain to throbbing sensations, and may be accompanied by sensitivity to light or sound. If symptoms are severe or persistent, consider consulting a healthcare provider."
-        elif "stomach" in user_input.lower() or "nausea" in user_input.lower():
-            return "Stomach discomfort and nausea can be caused by various conditions including infections, food intolerances, or digestive disorders. Common causes include gastroenteritis, food poisoning, or acid reflux. While most causes resolve on their own, persistent symptoms should be evaluated by a healthcare provider."
-        elif "fever" in user_input.lower():
-            return "Fever is the body's natural response to infection or illness. Common causes include viral infections like the flu, bacterial infections such as strep throat, or inflammatory conditions. If a fever is high (above 103°F) or persists for several days, it's advisable to seek medical attention."
-        else:
-            return "Based on your description of symptoms, there could be several possible explanations. For a proper assessment, it would be best to consult with a healthcare provider who can provide guidance specific to your situation."
+        return simple_demo_response(user_input)
+
 
 def simple_demo_response(query):
     """Generate a simple demo response for when the model isn't available"""
@@ -254,7 +250,24 @@ def simple_demo_response(query):
 
 if __name__ == "__main__":
     debug_log(f"Starting SympAI RAG script with args: {sys.argv}")
-    
+
+    # Ensure paths are set before using them
+    MODEL_DIR = os.path.dirname(os.path.abspath(__file__))
+    HISTORY_PATH = os.path.join(MODEL_DIR, 'session_history.json')
+
+    def load_session_history():
+        if os.path.exists(HISTORY_PATH):
+            with open(HISTORY_PATH, 'r') as f:
+                return json.load(f)
+        return []
+
+    def save_session_history(history):
+        with open(HISTORY_PATH, 'w') as f:
+            json.dump(history, f)
+
+    # Load session history from disk
+    SESSION_HISTORY = load_session_history()
+
     if not IMPORTS_SUCCEEDED:
         debug_log("Required packages are missing. Using simple demo mode.")
         if len(sys.argv) < 2:
@@ -263,28 +276,25 @@ if __name__ == "__main__":
         user_query = sys.argv[1]
         print(simple_demo_response(user_query))
         sys.exit(0)
-    
+
     if len(sys.argv) < 2:
         print("Usage: python rag_api.py 'user query'", file=sys.stderr)
         sys.exit(1)
-    
-    # Get user query from command line argument
+
     user_query = sys.argv[1]
     debug_log(f"Received query: {user_query}")
-    
+
     try:
-        # Load or build the model
         success, index, medical_corpus = load_or_build_model()
-        
+
         if success:
             debug_log("Using full RAG model")
-            # Process the query and print result to stdout (for Node.js to capture)
-            result = ask_sympai(user_query, index, medical_corpus)
+            result = ask_sympai(user_query, index, medical_corpus, SESSION_HISTORY)
+            save_session_history(SESSION_HISTORY)
         else:
             debug_log("Using simple demo response")
             result = simple_demo_response(user_query)
-            
-        # Print the result to stdout for Node.js to capture
+
         print(result)
     except Exception as e:
         debug_log(f"Critical error: {e}")
