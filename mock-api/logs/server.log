@@ -1949,3 +1949,233 @@ DEBUG: Processing query with history: what was the first thing I said
 [2025-05-07T05:43:57.674Z] Python process exited with code 0
 [2025-05-07T05:43:57.675Z] RAG response received (45 chars)
 [2025-05-07T05:43:57.676Z] Response sent to client (45 chars)
+[2025-05-07T05:48:31.818Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-07T05:48:31.820Z] Using RAG system from Python notebook for responses
+[2025-05-07T05:48:46.675Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-07T05:48:46.677Z] Using RAG system from Python notebook for responses
+[2025-05-07T06:03:38.918Z] Received query: "my head hurts"
+[2025-05-07T06:03:38.918Z] Calling Python RAG with query: "my head hurts"
+[2025-05-07T06:03:44.660Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my head hurts']
+[2025-05-07T06:03:44.660Z] Python stderr: DEBUG: Received query: my head hurts
+DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-07T06:03:44.663Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query with history: my head hurts
+[2025-05-07T06:03:46.632Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-07T06:03:47.880Z] Python stdout: I remember now! Your first statement was indeed "my head hurts".
+[2025-05-07T06:03:48.475Z] Python process exited with code 0
+[2025-05-07T06:03:48.475Z] RAG response received (64 chars)
+[2025-05-07T06:03:48.476Z] Response sent to client (64 chars)
+[2025-05-07T06:04:20.904Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-07T06:04:20.906Z] Using RAG system from Python notebook for responses
+[2025-05-07T06:04:32.624Z] Received query: "my head hurts"
+[2025-05-07T06:04:32.624Z] Calling Python RAG with query: "my head hurts"
+[2025-05-07T06:04:38.524Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my head hurts']
+[2025-05-07T06:04:38.534Z] Python stderr: DEBUG: Received query: my head hurts
+[2025-05-07T06:04:38.534Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-07T06:04:38.538Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-07T06:04:38.538Z] Python stderr: DEBUG: Processing query with history: my head hurts
+[2025-05-07T06:04:40.351Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-07T06:04:44.843Z] Python stdout: I see that the clinical background mentions contusion of the frontal lobe of the brain, closed head injury, and history of fall as possible causes of headache.
+[2025-05-07T06:04:45.543Z] Python process exited with code 0
+[2025-05-07T06:04:45.543Z] RAG response received (159 chars)
+[2025-05-07T06:04:45.544Z] Response sent to client (159 chars)
+[2025-05-07T06:06:24.250Z] Received query: "how are you"
+[2025-05-07T06:06:24.250Z] Calling Python RAG with query: "how are you"
+[2025-05-07T06:06:30.336Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'how are you']
+[2025-05-07T06:06:30.337Z] Python stderr: DEBUG: Received query: how are you
+DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-07T06:06:30.340Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-07T06:06:30.341Z] Python stderr: DEBUG: Processing query with history: how are you
+[2025-05-07T06:06:32.176Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-07T06:06:33.124Z] Python stdout: I'm a symptom assistant, not a human being, so I don't have feelings or emotions like humans do. I exist solely to provide information and assist with symptom-related questions to the best of my ability, based on my training and the information provided to me.
+[2025-05-07T06:06:33.731Z] Python process exited with code 0
+[2025-05-07T06:06:33.731Z] RAG response received (260 chars)
+[2025-05-07T06:06:33.732Z] Response sent to client (260 chars)
+[2025-05-07T06:06:42.586Z] Received query: "my head hurtws"
+[2025-05-07T06:06:42.586Z] Calling Python RAG with query: "my head hurtws"
+[2025-05-07T06:06:48.423Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my head hurtws']
+[2025-05-07T06:06:48.423Z] Python stderr: DEBUG: Received query: my head hurtws
+DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-07T06:06:48.427Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query with history: my head hurtws
+[2025-05-07T06:06:50.320Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-07T06:06:50.922Z] Python stdout: It seems like you're providing clinical background information related to head injuries and contusions. I'll make sure to keep that in mind as we continue our conversation.
+[2025-05-07T06:06:51.488Z] Python process exited with code 0
+[2025-05-07T06:06:51.488Z] RAG response received (172 chars)
+[2025-05-07T06:06:51.489Z] Response sent to client (172 chars)
+[2025-05-07T06:08:55.890Z] Received query: "my stomach is hurting"
+[2025-05-07T06:08:55.890Z] Calling Python RAG with query: "my stomach is hurting"
+[2025-05-07T06:09:01.667Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my stomach is hurting']
+[2025-05-07T06:09:01.668Z] Python stderr: Traceback (most recent call last):
+  File "C:\Users\alex\Desktop\sympAI\src\pages\rag_api.py", line 269, in <module>
+    SESSION_HISTORY = load_session_history()
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alex\Desktop\sympAI\src\pages\rag_api.py", line 261, in load_session_history
+[2025-05-07T06:09:01.668Z] Python stderr: return json.load(f)
+           ^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 293, in load
+[2025-05-07T06:09:01.669Z] Python stderr: return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+[2025-05-07T06:09:01.669Z] Python stderr: return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-05-07T06:09:01.670Z] Python stderr: File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 356, in raw_decode
+[2025-05-07T06:09:01.670Z] Python stderr: raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2025-05-07T06:09:02.270Z] Python process exited with code 1
+[2025-05-07T06:09:02.271Z] Error: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my stomach is hurting']
+Traceback (most recent call last):
+  File "C:\Users\alex\Desktop\sympAI\src\pages\rag_api.py", line 269, in <module>
+    SESSION_HISTORY = load_session_history()
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alex\Desktop\sympAI\src\pages\rag_api.py", line 261, in load_session_history
+    return json.load(f)
+           ^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2025-05-07T06:09:02.271Z] Using fallback response for: "my stomach is hurting"
+[2025-05-07T06:09:02.272Z] Response sent to client (426 chars)
+[2025-05-07T06:09:14.374Z] Received query: "its kind of like a burning sense"
+[2025-05-07T06:09:14.376Z] Calling Python RAG with query: "its kind of like a burning sense"
+[2025-05-07T06:09:20.192Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'its kind of like a burning sense']
+[2025-05-07T06:09:20.193Z] Python stderr: Traceback (most recent call last):
+  File "C:\Users\alex\Desktop\sympAI\src\pages\rag_api.py", line 269, in <module>
+    SESSION_HISTORY = load_session_history()
+[2025-05-07T06:09:20.193Z] Python stderr: ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alex\Desktop\sympAI\src\pages\rag_api.py", line 261, in load_session_history
+    return json.load(f)
+           ^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 293, in load
+[2025-05-07T06:09:20.194Z] Python stderr: return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+[2025-05-07T06:09:20.194Z] Python stderr: File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 338, in decode
+[2025-05-07T06:09:20.194Z] Python stderr: obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 356, in raw_decode
+[2025-05-07T06:09:20.195Z] Python stderr: raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2025-05-07T06:09:20.766Z] Python process exited with code 1
+[2025-05-07T06:09:20.766Z] Error: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'its kind of like a burning sense']
+Traceback (most recent call last):
+  File "C:\Users\alex\Desktop\sympAI\src\pages\rag_api.py", line 269, in <module>
+    SESSION_HISTORY = load_session_history()
+                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alex\Desktop\sympAI\src\pages\rag_api.py", line 261, in load_session_history
+    return json.load(f)
+           ^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\json\decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2025-05-07T06:09:20.767Z] Using fallback response for: "its kind of like a burning sense"
+[2025-05-07T06:09:20.767Z] Response sent to client (353 chars)
+[2025-05-07T06:20:00.041Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-07T06:20:00.042Z] Using RAG system from Python notebook for responses
+[2025-05-07T06:20:14.236Z] Received query: "hello, my head is hurting"
+[2025-05-07T06:20:14.237Z] Calling Python RAG with query: "hello, my head is hurting"
+[2025-05-07T06:20:20.183Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'hello, my head is hurting']
+[2025-05-07T06:20:20.184Z] Python stderr: DEBUG: Received query: hello, my head is hurting
+DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-07T06:20:20.187Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-07T06:20:20.187Z] Python stderr: DEBUG: Processing query with history: hello, my head is hurting
+[2025-05-07T06:20:21.981Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-07T06:20:22.567Z] Python stdout: Sorry to hear that your head is hurting. A headache can be caused by various factors, including tension, stress, fatigue, or underlying medical conditions.
+
+To help you better, can you please provide more information about your headache? For example:
+
+* Is it a sharp or dull pain?
+* Is it located on one side or all over your head?
+* Is it accompanied by other symptoms such as nausea, vomiting, or sensitivity to light or sound?
+* How long have you been experiencing the headache?
+* Have you experienced any recent head trauma or injury?
+
+This information will help me provide a more accurate assessment and suggest possible causes or next steps for you.
+[2025-05-07T06:20:23.227Z] Python process exited with code 0
+[2025-05-07T06:20:23.227Z] RAG response received (666 chars)
+[2025-05-07T06:20:23.228Z] Response sent to client (666 chars)
+[2025-05-07T06:20:31.471Z] Received query: "its a dull pain"
+[2025-05-07T06:20:31.471Z] Calling Python RAG with query: "its a dull pain"
+[2025-05-07T06:20:37.427Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'its a dull pain']
+[2025-05-07T06:20:37.435Z] Python stderr: DEBUG: Received query: its a dull pain
+[2025-05-07T06:20:37.436Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-07T06:20:37.439Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-07T06:20:37.440Z] Python stderr: DEBUG: Processing query with history: its a dull pain
+[2025-05-07T06:20:39.175Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-07T06:20:40.066Z] Python stdout: A dull pain in the head can be caused by various factors. Considering the general clinical background you provided, I'd like to explore some possibilities.
+
+Given that you mentioned a dull pain in your head, I'd like to ask: Are you experiencing any radiation of pain to other areas, such as the face, neck, or shoulders? Additionally, are you experiencing any other symptoms like sensitivity to light, noise, or nausea?
+
+Keep in mind that a dull pain in the head can be related to various conditions, including tension headaches, migraines, or even sinusitis. If you're experiencing radiation of pain or other symptoms, it may be worth exploring further.
+
+Please provide more information, and I'll do my best to help you narrow down the possible causes of your headache.
+[2025-05-07T06:20:40.667Z] Python process exited with code 0
+[2025-05-07T06:20:40.668Z] RAG response received (777 chars)
+[2025-05-07T06:20:40.669Z] Response sent to client (777 chars)
+[2025-05-07T06:39:21.641Z] Received query: "hello"
+[2025-05-07T06:39:21.642Z] Calling Python RAG with query: "hello"
+[2025-05-07T06:39:27.805Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'hello']
+[2025-05-07T06:39:27.806Z] Python stderr: DEBUG: Received query: hello
+DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-07T06:39:27.810Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-07T06:39:27.811Z] Python stderr: DEBUG: Processing query with history: hello
+[2025-05-07T06:39:29.777Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-07T06:39:30.265Z] Python stdout: I'm here to help with your symptom-related health questions. It seems like you provided some general clinical background information, which is not directly related to your headache symptoms. I'm happy to help with your original question about the dull pain in your head.
+
+To reiterate, you mentioned experiencing a dull pain in your head. Have you noticed any triggers or factors that might be contributing to the pain? For example, is it worse at certain times of the day, after certain activities, or in response to specific foods or substances?
+
+I'll do my best to provide helpful information and suggestions based on your symptoms. Please feel free to provide more details, and I'll do my best to assist you.
+[2025-05-07T06:39:31.010Z] Python process exited with code 0
+[2025-05-07T06:39:31.011Z] RAG response received (716 chars)
+[2025-05-07T06:39:31.012Z] Response sent to client (716 chars)
+[2025-05-07T06:42:28.704Z] Received query: "test"
+[2025-05-07T06:42:28.705Z] Calling Python RAG with query: "test"
+[2025-05-07T06:42:34.487Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'test']
+[2025-05-07T06:42:34.488Z] Python stderr: DEBUG: Received query: test
+DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-07T06:42:34.492Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-07T06:42:34.492Z] Python stderr: DEBUG: Processing query with history: test
+[2025-05-07T06:42:36.285Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-07T06:42:36.707Z] Python stdout: I'm here to help with your symptom-related health questions. It seems like the text you provided is a general clinical background, which is not directly related to your original question about the dull pain in your head.
+
+As a symptom assistant, I'm only able to provide information and guidance based on the symptoms you're experiencing. If you'd like to continue discussing your headache symptoms, I'd be happy to help.
+
+Please feel free to provide more information about your headache, such as any triggers, radiation of pain, or other symptoms you're experiencing. I'll do my best to provide helpful information and suggestions based on your symptoms.
+
+If you have any other questions or concerns, please don't hesitate to ask.
+[2025-05-07T06:42:37.295Z] Python process exited with code 0
+[2025-05-07T06:42:37.296Z] RAG response received (737 chars)
+[2025-05-07T06:42:37.297Z] Response sent to client (737 chars)
