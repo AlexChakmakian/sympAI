@@ -17,11 +17,6 @@ function ChatBotPage() {
         if (res.ok) {
           const data = await res.json();
           setChatHistory(data.chat_history);
-         // const formatted = data.chat_history.map(chat => ([
-          //  { text: chat.message, sender: 'user' },
-          //  { text: chat.response, sender: 'bot' }
-         // ])).flat();
-         // setMessages(formatted);
         }
       } catch (err) {
         console.error('Error fetching chat history:', err);
@@ -65,7 +60,16 @@ function ChatBotPage() {
     }
   };
 
-   return (
+  const handleChatClick = (chat) => {
+    const formattedMessages = [
+      { text: chat.message, sender: 'user' },
+      { text: chat.response, sender: 'bot' }
+    ];
+    setMessages(formattedMessages);
+  };
+  
+
+  return (
     <div className="chatbot-page">
       <header className="chatbot-header">
         <h1>SympAI Chat</h1>
@@ -75,7 +79,7 @@ function ChatBotPage() {
         <div className="chat-history">
           <h2>Previous Chats</h2>
           {chatHistory.map((chat, index) => (
-            <div key={index} className="history-item">
+            <div key={index} className="history-item" onClick={() => handleChatClick(chat)}>
               <div><strong>You:</strong> {chat.message}</div>
               <div><strong>Bot:</strong> {chat.response}</div>
               <div className="timestamp">{new Date(chat.timestamp).toLocaleString()}</div>
@@ -83,23 +87,25 @@ function ChatBotPage() {
           ))}
         </div>
 
-        <div className="messages">
-          {messages.map((message, index) => (
-            <div key={index} className={`message ${message.sender}`}>
-              {message.text}
-            </div>
-          ))}
-        </div>
+        <div className="chat-main">
+          <div className="messages">
+            {messages.map((message, index) => (
+              <div key={index} className={`message ${message.sender}`}>
+                {message.text}
+              </div>
+            ))}
+          </div>
 
-        <form onSubmit={handleSendMessage} className="message-input">
-          <input
-            type="text"
-            value={inputText}
-            onChange={(e) => setInputText(e.target.value)}
-            placeholder="Type your message..."
-          />
-          <button type="submit">Send</button>
-        </form>
+          <form onSubmit={handleSendMessage} className="message-input">
+            <input
+              type="text"
+              value={inputText}
+              onChange={(e) => setInputText(e.target.value)}
+              placeholder="Type your message..."
+            />
+            <button type="submit">Send</button>
+          </form>
+        </div>
       </div>
     </div>
   );
