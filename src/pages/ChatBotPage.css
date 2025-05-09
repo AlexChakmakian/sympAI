@@ -1,4 +1,5 @@
 /* SympAI ChatBot Page - Enhanced Clean UI */
+/* SympAI ChatBot Page - Enhanced Clean UI */
 .chatbot-page {
   display: flex;
   flex-direction: column;
@@ -39,17 +40,28 @@
 .chat-container {
   flex: 1;
   display: flex;
-  flex-direction: column;
-  max-width: 900px;
-  width: 100%;
+  flex-direction: row;
+  max-width: 1200px;
   margin: 0 auto;
-  background-color: #ffffff;
-  box-shadow: 0 0 30px rgba(0,0,0,0.06);
-  border-radius: 0 0 18px 18px;
+  width: 100%;
   overflow: hidden;
-  padding: 20px;
-  height: calc(100vh - 130px);
-  position: relative;
+}
+
+/* Previous chats */
+.chat-history {
+  width: 300px;
+  background-color: #f5f5f5;
+  border-right: 1px solid #ccc;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+/* Main chat column */
+.chat-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #e0e2dd;
 }
 
 .messages {
@@ -78,18 +90,18 @@
 
 .message.user {
   align-self: flex-end;
-  background-color: #cbd5df;
-  color: #2f2f2f;
-  border-bottom-right-radius: 6px;
+  background-color: #ACB7C3;
+  color: #403B3B;
+  border-bottom-right-radius: 5px;
   margin-left: 18%;
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .message.bot {
   align-self: flex-start;
-  background-color: #e0e1dc;
-  color: #2f2f2f;
-  border-bottom-left-radius: 6px;
+  background-color: #C5C7C2;
+  color: #403B3B;
+  border-bottom-left-radius: 5px;
   margin-right: 18%;
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -249,6 +261,26 @@
   .message {
     max-width: 85%;
   }
+}
+
+.history-item {
+  margin-bottom: 12px;
+  padding: 8px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.history-item:hover {
+  background-color: #e0e0e0;
+}
+
+.timestamp {
+  font-size: 0.75rem;
+  color: gray;
+  margin-top: 4px;
 }
 
 .disclaimer {

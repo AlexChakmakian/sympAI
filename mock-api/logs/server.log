@@ -2179,3 +2179,57 @@ If you have any other questions or concerns, please don't hesitate to ask.
 [2025-05-07T06:42:37.295Z] Python process exited with code 0
 [2025-05-07T06:42:37.296Z] RAG response received (737 chars)
 [2025-05-07T06:42:37.297Z] Response sent to client (737 chars)
+[2025-05-09T19:19:18.256Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-09T19:19:18.262Z] Using RAG system from Python notebook for responses
+[2025-05-09T19:22:57.876Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-09T19:22:57.887Z] Using RAG system from Python notebook for responses
+[2025-05-09T19:24:01.769Z] Received query: "HI! My head is hurting"
+[2025-05-09T19:24:01.771Z] Calling Python RAG with query: "HI! My head is hurting"
+[2025-05-09T19:24:01.963Z] Python stderr: Import error: No module named 'faiss'
+[2025-05-09T19:24:01.964Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'HI! My head is hurting']
+DEBUG: Required packages are missing. Using simple demo mode.
+DEBUG: Using simple demo response function
+[2025-05-09T19:24:01.965Z] Python stdout: Headaches can have various causes ranging from tension and stress to more serious conditions. Common types include tension headaches, migraines, and cluster headaches. It's important to consult with a healthcare provider for persistent or severe headaches.
+[2025-05-09T19:24:01.978Z] Python process exited with code 0
+[2025-05-09T19:24:01.980Z] RAG response received (256 chars)
+[2025-05-09T19:24:01.984Z] Response sent to client (256 chars)
+[2025-05-09T21:53:10.601Z] Received query: "my stomach is hurting"
+[2025-05-09T21:53:10.614Z] Calling Python RAG with query: "my stomach is hurting"
+[2025-05-09T21:53:10.834Z] Python stderr: Import error: No module named 'faiss'
+DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my stomach is hurting']
+[2025-05-09T21:53:10.835Z] Python stderr: DEBUG: Required packages are missing. Using simple demo mode.
+DEBUG: Using simple demo response function
+[2025-05-09T21:53:10.836Z] Python stdout: Based on your description, there could be several possible explanations. For a proper assessment, it would be best to consult with a healthcare provider who can take into account your medical history and perform an examination if needed.
+[2025-05-09T21:53:10.847Z] Python process exited with code 0
+[2025-05-09T21:53:10.851Z] RAG response received (237 chars)
+[2025-05-09T21:53:10.861Z] Response sent to client (237 chars)
+[2025-05-09T21:53:53.480Z] Received query: "Hi my head hurts "
+[2025-05-09T21:53:53.482Z] Calling Python RAG with query: "Hi my head hurts "
+[2025-05-09T21:53:53.712Z] Python stderr: Import error: No module named 'faiss'
+DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'Hi my head hurts ']
+DEBUG: Required packages are missing. Using simple demo mode.
+DEBUG: Using simple demo response function
+[2025-05-09T21:53:53.712Z] Python stdout: Headaches can have various causes ranging from tension and stress to more serious conditions. Common types include tension headaches, migraines, and cluster headaches. It's important to consult with a healthcare provider for persistent or severe headaches.
+[2025-05-09T21:53:53.716Z] Python process exited with code 0
+[2025-05-09T21:53:53.716Z] RAG response received (256 chars)
+[2025-05-09T21:53:53.722Z] Response sent to client (256 chars)
+[2025-05-09T21:54:02.072Z] Received query: "what can i do?"
+[2025-05-09T21:54:02.085Z] Calling Python RAG with query: "what can i do?"
+[2025-05-09T21:54:02.253Z] Python stderr: Import error: No module named 'faiss'
+[2025-05-09T21:54:02.254Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'what can i do?']
+DEBUG: Required packages are missing. Using simple demo mode.
+DEBUG: Using simple demo response function
+[2025-05-09T21:54:02.255Z] Python stdout: Based on your description, there could be several possible explanations. For a proper assessment, it would be best to consult with a healthcare provider who can take into account your medical history and perform an examination if needed.
+[2025-05-09T21:54:02.299Z] Python process exited with code 0
+[2025-05-09T21:54:02.300Z] RAG response received (237 chars)
+[2025-05-09T21:54:02.322Z] Response sent to client (237 chars)
+[2025-05-09T22:02:57.116Z] Received query: "my head hurts"
+[2025-05-09T22:02:57.118Z] Calling Python RAG with query: "my head hurts"
+[2025-05-09T22:02:57.329Z] Python stderr: Import error: No module named 'faiss'
+[2025-05-09T22:02:57.330Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my head hurts']
+DEBUG: Required packages are missing. Using simple demo mode.
+DEBUG: Using simple demo response function
+[2025-05-09T22:02:57.331Z] Python stdout: Headaches can have various causes ranging from tension and stress to more serious conditions. Common types include tension headaches, migraines, and cluster headaches. It's important to consult with a healthcare provider for persistent or severe headaches.
+[2025-05-09T22:02:57.337Z] Python process exited with code 0
+[2025-05-09T22:02:57.338Z] RAG response received (256 chars)
+[2025-05-09T22:02:57.345Z] Response sent to client (256 chars)

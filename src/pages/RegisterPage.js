@@ -22,12 +22,17 @@ function RegisterPage() {
       if (response.ok) {
         const data = await response.json();
         console.log('Registration success:', data);
-
-        // After successful registration, navigate to login page
         navigate('/login');
       } else {
         const err = await response.json();
-        setError(err.message || 'Registration failed');
+      
+        if (response.status === 409) {
+          setError('An account with this email already exists. Please log in.');
+        } else if (response.status === 400) {
+          setError('Please fill in all required fields.');
+        } else {
+          setError(err.error || 'Registration failed');
+        }
       }
     } catch (err) {
       setError('Something went wrong.');

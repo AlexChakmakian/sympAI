@@ -8,5 +8,6 @@ class Chat(db.Model):
     message = db.Column(db.Text, nullable=False)
     response = db.Column(db.Text, nullable=False)
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+    
 
     user = db.relationship('User', backref=db.backref('chats', lazy=True))
