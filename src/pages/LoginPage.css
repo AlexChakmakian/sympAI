@@ -1,0 +1,124 @@
+/* Login Page Styles */
+
+.login-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Istok Web', sans-serif;
+}
+
+.login-page {
+  flex: 3;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content:center;
+  background-color: #E0E1DD;
+}
+
+.forms-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.login-page h1 {
+  color: #333;
+  margin-bottom: 2.4rem;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.signup-direct {
+  flex: 2;
+  background-color: #2F3E46;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  justify-content: center;
+}
+
+.forms {
+  width: 300px;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  width:100%;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555;
+  text-align: left;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #CAD2C5;
+}
+
+.login-button {
+  width: 200px;
+  padding: 15px;
+  background-color: #354F52;
+  color: #CFD0CC;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.login-button:hover {
+  background-color: #2F3E46;
+  transform: translateY(-2px);
+  color: #CFD0CC;
+}
+
+.welcome-msg {
+  text-align: center;
+}
+
+.welcome-msg h2 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+}
+
+.welcome-msg p {
+  font-size: 1.2rem;
+  color: #d1d5db;
+}
+
+.signup-btn {
+  width: 150px;
+  margin-top: auto;
+  margin-bottom: 2rem;
+  padding: 14px 26px;
+  background-color: #E0E1DD;
+  color: #1e293b;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: bold;
+}
+
+.signup-btn:hover {
+  background-color: #CFD0CC;
+  transform: translateY(-2px);
+}

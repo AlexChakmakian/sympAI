@@ -1,0 +1,19 @@
+{
+  "responses": [
+    {
+      "id": 1,
+      "query": "chest pain",
+      "response": "Chest pain can be associated with various conditions ranging from anxiety to serious cardiovascular issues. These symptoms could indicate conditions like anxiety, asthma, pneumonia, bronchitis, pulmonary embolism, or heart-related problems such as angina or myocardial infarction. It's important to note that chest pain could potentially indicate a serious medical condition that requires immediate attention. Please consult with a healthcare provider promptly for proper evaluation and diagnosis, especially if the symptoms are severe or persistent."
+    },
+    {
+      "id": 2,
+      "query": "headache",
+      "response": "Headaches can be symptoms of various conditions including stress, tension, dehydration, eye strain, or more serious conditions like migraines or hypertension. Most headaches aren't serious, but persistent, severe, or unusual headaches may require medical attention. Please consult with a healthcare provider for proper diagnosis and treatment recommendations if your symptoms are concerning."
+    },
+    {
+      "id": 3,
+      "query": "default",
+      "response": "I understand you're describing some health concerns. Based on general medical knowledge, these symptoms could be associated with various conditions. However, for accurate diagnosis and appropriate treatment, it's essential to consult with a qualified healthcare provider who can perform a thorough examination and consider your complete medical history."
+    }
+  ]
+}
