@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './LoginPage.css';
+import './RegisterPage.css';
 
-function LoginPage() {
+function RegisterPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState(''); // To display any login errors
+  const [error, setError] = useState(''); 
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/login', {
+      const response = await fetch('http://localhost:5000/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -21,20 +21,17 @@ function LoginPage() {
 
       if (response.ok) {
         const data = await response.json();
-        console.log('Login success:', data);
-        localStorage.setItem('user_id', data.user.id)
-
-        // Redirect to chat page after successful login
-        navigate('/chat');
+        console.log('Registration success:', data);
+        navigate('/login');
       } else {
         const err = await response.json();
-
-        if(response.status === 401) {
-          setError('Incorrect password. Please try again.');
-        } else if (response.status === 404){
-          setError('No account found with that email. Please register first.');
+      
+        if (response.status === 409) {
+          setError('An account with this email already exists. Please log in.');
+        } else if (response.status === 400) {
+          setError('Please fill in all required fields.');
         } else {
-          setError(err.message || 'Login failed');
+          setError(err.error || 'Registration failed');
         }
       }
     } catch (err) {
@@ -44,11 +41,11 @@ function LoginPage() {
   };
 
   return (
-    <div className="login-container">
-      <div className="login-page">
+    <div className="register-container">
+      <div className="register-page">
         <div className="forms-wrapper">
-          <h1>Sign In</h1>
-          {error && <p style={{ color: 'red' }}>{error}</p>} {/* Display error message */}
+          <h1>Sign Up</h1>
+          {error && <p style={{ color: 'red' }}>{error}</p>}
           <form onSubmit={handleSubmit} className="forms">
             <div className="form-group">
               <label htmlFor="email">Email</label>
@@ -70,22 +67,22 @@ function LoginPage() {
                 required
               />
             </div>
-            <button type="submit" className="login-button">
-              LOGIN
+            <button type="submit" className="register-button">
+              REGISTER
             </button>
           </form>
         </div>
       </div>
 
-      <div className="signup-direct">
+      <div className="login-direct">
         <div className="welcome-msg">
-          <h2>Welcome Back!</h2>
-          <p>Don't have an account?</p>
-          <button className="signup-btn" onClick={() => navigate('/register')}> SIGN UP</button>
+          <h2>Welcome!</h2>
+          <p>Already have an account?</p>
+          <button className="login-btn" onClick={() => navigate('/login')}>LOGIN</button>
         </div>
       </div>
     </div>
   );
 }
 
-export default LoginPage;
+export default RegisterPage;
