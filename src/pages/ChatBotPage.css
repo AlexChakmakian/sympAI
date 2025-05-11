@@ -23,6 +23,16 @@
   transition: all 0.3s ease;
 }
 
+.chatbot-header .logo-link {
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.chatbot-header .logo-link:hover {
+  transform: scale(1.05);
+}
+
 .chatbot-header .logo {
   height: 60px;
   width: auto;
@@ -30,10 +40,6 @@
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
   transition: transform 0.3s ease;
   object-fit: contain;
-}
-
-.chatbot-header .logo:hover {
-  transform: scale(1.05);
 }
 
 .chatbot-header h1 {

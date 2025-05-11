@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './ChatBotPage.css';
 import sympAILogo from '../sympAI_logo.png';
 
@@ -171,7 +172,9 @@ function ChatBotPage() {
   return (
     <div className="chatbot-page">
       <header className="chatbot-header">
-        <img src={sympAILogo} alt="SympAI Logo" className="logo" />
+        <Link to="/" className="logo-link">
+          <img src={sympAILogo} alt="SympAI Logo" className="logo" />
+        </Link>
         <p className="header-subtitle">Your AI-powered symptom assistant</p>
       </header>
 
