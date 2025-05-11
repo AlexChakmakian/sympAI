@@ -1,25 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './ChatBotPage.css';
+import sympAILogo from '../sympAI_logo.png';
 
-// Microphone SVG icon component
+// Icons
 const MicIcon = ({ active }) => (
-  <svg 
-    className={`mic-icon ${active ? 'active' : ''}`} 
-    xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 24 24" 
-    width="12"
-    height="12"
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
-    strokeLinejoin="round"
-    style={{ 
-      maxWidth: '14px', 
-      maxHeight: '14px',
-      display: 'block'
-    }}
-  >
+  <svg className={`mic-icon ${active ? 'active' : ''}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ maxWidth: '14px', maxHeight: '14px', display: 'block' }}>
     <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z" />
     <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
     <line x1="12" y1="19" x2="12" y2="22" />
@@ -27,7 +13,6 @@ const MicIcon = ({ active }) => (
   </svg>
 );
 
-// Arrow SVG icon component for the send button
 const SendIcon = () => (
   <svg className="send-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
@@ -39,17 +24,18 @@ function ChatBotPage() {
     { text: 'Hello! I\'m SympAI, your symptom assistant. How can I help you today?', sender: 'bot' }
   ]);
   const [inputText, setInputText] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const [hasError, setHasError] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [supportsSpeech, setSupportsSpeech] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [hasError, setHasError] = useState(false);
+  const [chatHistory, setChatHistory] = useState([]);
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
   const recognitionRef = useRef(null);
+  const userId = parseInt(localStorage.getItem('user_id'));
 
-  // Initialize speech recognition if available
   useEffect(() => {
-    // Check if speech recognition is supported
+    // Speech Recognition
     if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
       const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       recognitionRef.current = new SpeechRecognition();
@@ -60,53 +46,38 @@ function ChatBotPage() {
       recognitionRef.current.onresult = (event) => {
         const transcript = event.results[0][0].transcript;
         setInputText(transcript);
-        // Auto-submit after a short delay
-        setTimeout(() => {
-          handleSendMessage({ preventDefault: () => {} });
-        }, 500);
+        setTimeout(() => handleSendMessage({ preventDefault: () => {} }), 500);
       };
 
-      recognitionRef.current.onerror = (event) => {
-        console.error('Speech recognition error', event.error);
-        setIsListening(false);
-      };
-
-      recognitionRef.current.onend = () => {
-        setIsListening(false);
-      };
+      recognitionRef.current.onerror = () => setIsListening(false);
+      recognitionRef.current.onend = () => setIsListening(false);
 
       setSupportsSpeech(true);
     }
-    
+
+    if (userId) {
+      fetch(`http://localhost:5000/chat-history/${userId}`)
+        .then(res => res.json())
+        .then(data => setChatHistory(data.chat_history || []))
+        .catch(err => console.error('Chat history error:', err));
+    }
+
     return () => {
-      // Cleanup
       if (recognitionRef.current) {
         recognitionRef.current.onend = null;
         recognitionRef.current.onresult = null;
         recognitionRef.current.onerror = null;
       }
     };
-  }, []);
-
-  // Scroll to bottom whenever messages change
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  }, [userId]);
 
   useEffect(() => {
-    scrollToBottom();
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  // Focus on input field when page loads
-  useEffect(() => {
-    inputRef.current?.focus();
-  }, []);
-
-  // Handle speech recognition toggle
   const toggleSpeechRecognition = () => {
     if (isListening) {
       recognitionRef.current?.stop();
-      setIsListening(false);
     } else {
       try {
         recognitionRef.current?.start();
@@ -117,48 +88,38 @@ function ChatBotPage() {
     }
   };
 
-  // Function to call the SympAI RAG system
   const fetchSympAIResponse = async (userInput) => {
     setHasError(false);
+    setIsLoading(true);
     try {
-      setIsLoading(true);
-      
-      // Update the API URL to point to the backend server
       const response = await fetch('http://localhost:3001/api/sympai', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query: userInput }),
       });
-      
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}));
-        console.error('API error:', errorData);
-        throw new Error(`Server error (${response.status}): ${errorData.error || response.statusText}`);
-      }
-      
+
+      if (!response.ok) throw new Error(`Server error: ${response.status}`);
+
       const data = await response.json();
-      
-      if (!data.response) {
-        throw new Error('Invalid response from server');
-      }
-      
-      return data.response;
-    } catch (error) {
-      console.error('Error fetching SympAI response:', error);
+      return data.response || "I couldn't understand that.";
+    } catch (err) {
+      console.error(err);
       setHasError(true);
-      
-      // Return error message to display to user
-      if (error.message.includes('Server error')) {
-        return `I'm having trouble connecting to my knowledge base. Technical details: ${error.message}`;
-      } else if (error.message.includes('Invalid response')) {
-        return "I received an incomplete response. The system may need maintenance.";
-      } else {
-        return "I'm experiencing technical difficulties. Please check your connection and try again in a moment.";
-      }
+      return "I'm experiencing technical difficulties. Please try again.";
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const saveChatToBackend = async (message, response) => {
+    try {
+      await fetch('http://localhost:5000/chat-history', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ user_id: userId, message, response }),
+      });
+    } catch (err) {
+      console.error('Error saving chat:', err);
     }
   };
 
@@ -166,163 +127,105 @@ function ChatBotPage() {
     e.preventDefault();
     if (!inputText.trim()) return;
 
-    // Add user message to chat
     const newMessages = [...messages, { text: inputText, sender: 'user' }];
-    setMessages(newMessages);
+    setMessages([...newMessages, { text: '', sender: 'bot', isTyping: true }]);
+    const userMessage = inputText;
     setInputText('');
 
-    // Show typing indicator
-    setMessages([...newMessages, { text: '', sender: 'bot', isTyping: true }]);
+    const botResponse = await fetchSympAIResponse(userMessage);
 
-    // Get response from the RAG-enabled chatbot
-    const botResponse = await fetchSympAIResponse(inputText);
-    
-    // Replace typing indicator with actual response
     setMessages([
-      ...newMessages, 
+      ...newMessages,
       { text: botResponse, sender: 'bot', isError: hasError }
     ]);
+
+    if (!hasError) saveChatToBackend(userMessage, botResponse);
   };
 
   const handleKeyDown = (e) => {
-    // Submit on Enter key (but allow Shift+Enter for newlines)
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleSendMessage(e);
     }
   };
 
-  const handleRetry = async () => {
-    // Get the last user message
-    const lastUserMessageIndex = [...messages].reverse().findIndex(msg => msg.sender === 'user');
-    if (lastUserMessageIndex < 0) return;
-    
-    const lastUserMessage = messages[messages.length - lastUserMessageIndex - 1];
-    
-    // Remove the error message
-    const newMessages = messages.slice(0, -1);
-    setMessages([...newMessages, { text: '', sender: 'bot', isTyping: true }]);
-    
-    // Try again
-    const botResponse = await fetchSympAIResponse(lastUserMessage.text);
-    
-    // Replace typing indicator with new response
+  const handleChatClick = (chat) => {
     setMessages([
-      ...newMessages, 
-      { text: botResponse, sender: 'bot', isError: hasError }
+      { text: chat.message, sender: 'user' },
+      { text: chat.response, sender: 'bot' }
     ]);
   };
 
   const formatMessage = (text) => {
-    // Convert URLs to clickable links
     const urlRegex = /(https?:\/\/[^\s]+)/g;
-    return text.split(urlRegex).map((part, index) => {
-      if (part.match(urlRegex)) {
-        return (
-          <a 
-            key={index} 
-            href={part} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            style={{ color: '#2F3E46', textDecoration: 'underline' }}
-          >
-            {part}
-          </a>
-        );
-      }
-      // Add line breaks
-      return part.split('\n').map((line, i) => (
-        <React.Fragment key={`${index}-${i}`}>
-          {line}
-          {i !== part.split('\n').length - 1 && <br />}
-        </React.Fragment>
-      ));
-    });
+    return text.split(urlRegex).map((part, index) =>
+      part.match(urlRegex) ? (
+        <a key={index} href={part} target="_blank" rel="noopener noreferrer">
+          {part}
+        </a>
+      ) : (
+        <span key={index}>{part}</span>
+      )
+    );
   };
 
   return (
     <div className="chatbot-page">
       <header className="chatbot-header">
-        <h1>SympAI Chat</h1>
+        <Link to="/" className="logo-link">
+          <img src={sympAILogo} alt="SympAI Logo" className="logo" />
+        </Link>
         <p className="header-subtitle">Your AI-powered symptom assistant</p>
       </header>
 
       <div className="chat-container">
-        <div className="messages">
-          {messages.map((message, index) => (
-            <div 
-              key={index} 
-              className={`message ${message.sender} ${message.isError ? 'error' : ''}`}
-            >
-              {message.isTyping ? (
-                <div className="typing-indicator">
-                  <span></span><span></span><span></span>
-                </div>
-              ) : (
-                <>
-                  {formatMessage(message.text)}
-                  {message.isError && (
-                    <button 
-                      className="retry-button" 
-                      onClick={handleRetry}
-                      aria-label="Retry"
-                    >
-                      ↻ Retry
-                    </button>
-                  )}
-                </>
-              )}
+        <div className="chat-history">
+          <h2>Previous Chats</h2>
+          {chatHistory.map((chat, index) => (
+            <div key={index} className="history-item" onClick={() => handleChatClick(chat)}>
+              <div><strong>You:</strong> {chat.message}</div>
+              <div><strong>Bot:</strong> {chat.response}</div>
+              <div className="timestamp">{new Date(chat.timestamp).toLocaleString()}</div>
             </div>
           ))}
-          <div ref={messagesEndRef} /> {/* This element will be scrolled into view */}
         </div>
 
-        <form 
-          onSubmit={handleSendMessage} 
-          className={`message-input-modern ${supportsSpeech ? 'with-speech-button' : ''}`}
-        >
-          <div className="input-bar">
-            {supportsSpeech && (
-              <button 
-                type="button" 
-                className={`speech-button-modern ${isListening ? 'active' : ''}`} 
-                onClick={toggleSpeechRecognition}
-                aria-label={isListening ? 'Stop listening' : 'Start speech recognition'}
-                disabled={isLoading}
-              >
-                <MicIcon active={isListening} />
-              </button>
-            )}
-            <input
-              ref={inputRef}
-              type="text"
-              value={inputText}
-              onChange={(e) => setInputText(e.target.value)}
-              onKeyDown={handleKeyDown}
-              placeholder={isListening ? 'Listening...' : 'Describe your symptoms...'}
-              disabled={isLoading || isListening}
-              aria-label="Message input"
-              className="modern-input"
-            />
-            <button 
-              type="submit" 
-              className="send-button-modern"
-              disabled={isLoading || !inputText.trim()} 
-              aria-label="Send message"
-            >
-              {isLoading ? (
-                <span className="typing-indicator">
-                  <span></span><span></span><span></span>
-                </span>
-              ) : (
-                <SendIcon />
-              )}
-            </button>
+        <div className="chat-main">
+          <div className="messages">
+            {messages.map((message, index) => (
+              <div key={index} className={`message ${message.sender} ${message.isError ? 'error' : ''}`}>
+                {message.isTyping ? (
+                  <div className="typing-indicator"><span></span><span></span><span></span></div>
+                ) : formatMessage(message.text)}
+              </div>
+            ))}
+            <div ref={messagesEndRef} />
           </div>
-        </form>
-        
-        <div className="disclaimer">
-          Important: This is not a medical diagnosis. Always consult with healthcare professionals.
+
+          <form onSubmit={handleSendMessage} className={`message-input-modern ${supportsSpeech ? 'with-speech-button' : ''}`}>
+            <div className="input-bar">
+              {supportsSpeech && (
+                <button type="button" className={`speech-button-modern ${isListening ? 'active' : ''}`} onClick={toggleSpeechRecognition} aria-label="Toggle speech" disabled={isLoading}>
+                  <MicIcon active={isListening} />
+                </button>
+              )}
+              <input
+                ref={inputRef}
+                type="text"
+                value={inputText}
+                onChange={(e) => setInputText(e.target.value)}
+                onKeyDown={handleKeyDown}
+                placeholder={isListening ? 'Listening...' : 'Describe your symptoms...'}
+                disabled={isLoading || isListening}
+                className="modern-input"
+              />
+              <button type="submit" className="send-button-modern" disabled={isLoading || !inputText.trim()} aria-label="Send">
+                {isLoading ? <div className="typing-indicator"><span></span><span></span><span></span></div> : <SendIcon />}
+              </button>
+            </div>
+          </form>
+
+          <div className="disclaimer">Important: This is not a medical diagnosis. Always consult with healthcare professionals.</div>
         </div>
       </div>
     </div>
