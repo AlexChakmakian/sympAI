@@ -2233,3 +2233,179 @@ DEBUG: Using simple demo response function
 [2025-05-09T22:02:57.337Z] Python process exited with code 0
 [2025-05-09T22:02:57.338Z] RAG response received (256 chars)
 [2025-05-09T22:02:57.345Z] Response sent to client (256 chars)
+[2025-05-11T17:55:26.122Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-11T17:55:26.126Z] Using RAG system from Python notebook for responses
+[2025-05-11T17:55:41.344Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-11T17:55:41.348Z] Using RAG system from Python notebook for responses
+[2025-05-11T18:06:38.318Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-11T18:06:38.322Z] Using RAG system from Python notebook for responses
+[2025-05-11T18:18:18.538Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-11T18:18:18.543Z] Using RAG system from Python notebook for responses
+[2025-05-11T18:18:30.169Z] Received query: "my head hurts"
+[2025-05-11T18:18:30.170Z] Calling Python RAG with query: "my head hurts"
+[2025-05-11T18:19:05.269Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my head hurts']
+DEBUG: Received query: my head hurts
+[2025-05-11T18:19:05.270Z] Python stderr: DEBUG: Found existing model files at C:\Users\Kinga\Downloads\sympAI\src\pages\medical_faiss_index.bin and C:\Users\Kinga\Downloads\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-11T18:19:05.285Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query with history: my head hurts
+[2025-05-11T18:19:07.390Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-11T18:19:07.987Z] Python stdout: I'm here to help you with your symptom-related concerns. A headache can be caused by various factors, and it's essential to determine the underlying cause.
+
+Since you mentioned a headache, I'd like to explore some possible causes. A contusion of the frontal lobe of the brain, closed head injury, or a history of fall could potentially lead to a headache. Additionally, migraines are a common condition that can cause severe headaches.
+
+To better understand your symptoms, can you please tell me more about your headache? How long have you been experiencing it, and is it accompanied by any other symptoms, such as sensitivity to light or nausea?
+[2025-05-11T18:19:09.516Z] Python process exited with code 0
+[2025-05-11T18:19:09.517Z] RAG response received (650 chars)
+[2025-05-11T18:19:09.521Z] Response sent to client (650 chars)
+[2025-05-11T18:21:01.216Z] Received query: "its  been for 2 days and gets worse when i look at bright light"
+[2025-05-11T18:21:01.217Z] Calling Python RAG with query: "its  been for 2 days and gets worse when i look at bright light"
+[2025-05-11T18:21:09.278Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'its  been for 2 days and gets worse when i look at bright light']
+[2025-05-11T18:21:09.291Z] Python stderr: DEBUG: Received query: its  been for 2 days and gets worse when i look at bright light
+[2025-05-11T18:21:09.293Z] Python stderr: DEBUG: Found existing model files at C:\Users\Kinga\Downloads\sympAI\src\pages\medical_faiss_index.bin and C:\Users\Kinga\Downloads\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-11T18:21:09.299Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query with history: its  been for 2 days and gets worse when i look at bright light
+[2025-05-11T18:21:11.378Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-11T18:21:11.814Z] Python stdout: Thank you for providing more information about your headache. Given that it worsens with bright light and has been ongoing for 2 days, I'm concerned that it might be related to a migraine or a photophobia (sensitivity to light).
+
+I'd like to explore further to determine the underlying cause. Can you please tell me if you've experienced any other symptoms, such as:
+
+* Sensitivity to sound or smells
+* Nausea or vomiting
+* Blurred vision or eye strain
+* Fatigue or irritability
+* Changes in appetite or sleep patterns
+
+Additionally, have you noticed any triggers that might have contributed to the onset of your headache, such as stress, caffeine, or certain foods?
+[2025-05-11T18:21:13.194Z] Python process exited with code 0
+[2025-05-11T18:21:13.195Z] RAG response received (676 chars)
+[2025-05-11T18:21:13.197Z] Response sent to client (676 chars)
+[2025-05-11T18:21:33.036Z] Received query: "no blurred vision and no triggers"
+[2025-05-11T18:21:33.038Z] Calling Python RAG with query: "no blurred vision and no triggers"
+[2025-05-11T18:21:40.986Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'no blurred vision and no triggers']
+[2025-05-11T18:21:40.999Z] Python stderr: DEBUG: Received query: no blurred vision and no triggers
+[2025-05-11T18:21:41.000Z] Python stderr: DEBUG: Found existing model files at C:\Users\Kinga\Downloads\sympAI\src\pages\medical_faiss_index.bin and C:\Users\Kinga\Downloads\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-11T18:21:41.006Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query with history: no blurred vision and no triggers
+[2025-05-11T18:21:43.265Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-11T18:21:43.943Z] Python stdout: I'd like to focus on the symptoms you've described, specifically the headache and photophobia. Given that you haven't experienced any blurred vision or triggers, I'm going to explore other possible causes.
+
+The clinical background you provided mentions symptoms related to double vision, which is a different concern. However, I'd like to ask: Have you experienced any episodes of double vision, as described in the clinical background, where the double vision disappears when you close your eyes and returns the next day?
+
+Additionally, I'd like to know if you've experienced any other symptoms, such as:
+
+* Nausea or vomiting
+* Lightheadedness or dizziness
+* Pale or clammy skin
+* Changes in appetite or sleep patterns
+
+Please let me know if you've experienced any of these symptoms, and I'll do my best to help you determine the underlying cause of your headache and photophobia.
+[2025-05-11T18:21:45.523Z] Python process exited with code 0
+[2025-05-11T18:21:45.524Z] RAG response received (893 chars)
+[2025-05-11T18:21:45.526Z] Response sent to client (893 chars)
+[2025-05-11T18:22:10.821Z] Received query: "i do have nausea and vomiting with the headache as well"
+[2025-05-11T18:22:10.822Z] Calling Python RAG with query: "i do have nausea and vomiting with the headache as well"
+[2025-05-11T18:22:18.737Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'i do have nausea and vomiting with the headache as well']
+[2025-05-11T18:22:18.754Z] Python stderr: DEBUG: Received query: i do have nausea and vomiting with the headache as well
+[2025-05-11T18:22:18.755Z] Python stderr: DEBUG: Found existing model files at C:\Users\Kinga\Downloads\sympAI\src\pages\medical_faiss_index.bin and C:\Users\Kinga\Downloads\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-11T18:22:18.761Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+[2025-05-11T18:22:18.762Z] Python stderr: DEBUG: Using full RAG model
+DEBUG: Processing query with history: i do have nausea and vomiting with the headache as well
+[2025-05-11T18:22:20.817Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-11T18:22:21.347Z] Python stdout: Thank you for providing more information about your symptoms. The presence of nausea and vomiting along with your headache and photophobia suggests that you may be experiencing a migraine with aura.
+
+Migraines with aura are a type of migraine that is characterized by the presence of specific symptoms, such as visual disturbances, sensitivity to light, and nausea, before the headache begins. The headache itself is often described as a throbbing or pulsating pain.
+
+Given your symptoms, I would recommend the following:
+
+1. Stay hydrated by drinking plenty of fluids, such as water or clear broth.
+2. Avoid trigger foods or activities that may exacerbate your symptoms.
+3. Consider taking over-the-counter pain relief medication, such as acetaminophen or ibuprofen, to help manage your headache.
+4. If your symptoms persist or worsen, consider seeking medical attention from a healthcare professional.
+
+Please keep in mind that this is not a definitive diagnosis, and a healthcare professional should evaluate you to determine the underlying cause of your symptoms.
+[2025-05-11T18:22:22.655Z] Python process exited with code 0
+[2025-05-11T18:22:22.656Z] RAG response received (1078 chars)
+[2025-05-11T18:22:22.657Z] Response sent to client (1078 chars)
+[2025-05-11T18:33:29.717Z] Received query: "my head hurts"
+[2025-05-11T18:33:29.719Z] Calling Python RAG with query: "my head hurts"
+[2025-05-11T18:33:38.234Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my head hurts']
+[2025-05-11T18:33:38.235Z] Python stderr: DEBUG: Received query: my head hurts
+DEBUG: Found existing model files at C:\Users\Kinga\Downloads\sympAI\src\pages\medical_faiss_index.bin and C:\Users\Kinga\Downloads\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-11T18:33:38.240Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-11T18:33:38.241Z] Python stderr: DEBUG: Processing query with history: my head hurts
+[2025-05-11T18:33:40.442Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-11T18:33:40.932Z] Python stdout: I'm here to help you with your symptom-related concerns. Since you mentioned a headache, I'd like to explore some possible causes. A contusion of the frontal lobe of the brain, closed head injury, or a history of fall could potentially lead to a headache.
+
+Given your symptoms, I'd like to ask: Have you experienced any other symptoms, such as sensitivity to light or nausea?
+[2025-05-11T18:33:42.346Z] Python process exited with code 0
+[2025-05-11T18:33:42.347Z] RAG response received (377 chars)
+[2025-05-11T18:33:42.349Z] Response sent to client (377 chars)
+[2025-05-11T19:37:23.881Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-11T19:37:23.884Z] Using RAG system from Python notebook for responses
+[2025-05-11T19:37:30.166Z] Received query: "my head hurts"
+[2025-05-11T19:37:30.166Z] Calling Python RAG with query: "my head hurts"
+[2025-05-11T19:38:07.205Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my head hurts']
+[2025-05-11T19:38:07.207Z] Python stderr: DEBUG: Received query: my head hurts
+DEBUG: Found existing model files at C:\Users\Kinga\Downloads\sympAI\src\pages\medical_faiss_index.bin and C:\Users\Kinga\Downloads\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-11T19:38:07.226Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query with history: my head hurts
+[2025-05-11T19:38:09.487Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-11T19:38:10.152Z] Python stdout: I'm here to help you with your symptom-related concerns. Since you mentioned a headache, I'd like to explore some possible causes.
+[2025-05-11T19:38:11.581Z] Python process exited with code 0
+[2025-05-11T19:38:11.582Z] RAG response received (130 chars)
+[2025-05-11T19:38:11.584Z] Response sent to client (130 chars)
+[2025-05-11T19:42:35.567Z] Received query: "my head hurts"
+[2025-05-11T19:42:35.568Z] Calling Python RAG with query: "my head hurts"
+[2025-05-11T19:42:41.246Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my head hurts']
+[2025-05-11T19:42:41.247Z] Python stderr: DEBUG: Received query: my head hurts
+DEBUG: Found existing model files at C:\Users\Kinga\Downloads\sympAI\src\pages\medical_faiss_index.bin and C:\Users\Kinga\Downloads\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-11T19:42:41.253Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query with history: my head hurts
+[2025-05-11T19:42:43.431Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-11T19:42:43.927Z] Python stdout: I apologize, but it seems that you didn't provide any new information about your headache symptoms. Since you mentioned that your head hurts, I'll reiterate that a contusion of the frontal lobe of the brain, closed head injury, or a history of fall could potentially lead to a headache.
+
+As a virtual symptom assistant, I'm here to help you explore possible causes and provide information. However, I need more specific details about your symptoms to provide a more accurate assessment. Can you please tell me more about your headache, such as:
+
+* How long have you been experiencing it?
+* Is it a sharp or dull pain?
+* Is it constant or does it come and go?
+* Are there any triggers that make it worse or better?
+
+Please provide me with more information so I can better assist you.
+[2025-05-11T19:42:45.059Z] Python process exited with code 0
+[2025-05-11T19:42:45.060Z] RAG response received (791 chars)
+[2025-05-11T19:42:45.062Z] Response sent to client (791 chars)
+[2025-05-11T19:45:42.586Z] Received query: "my head hurts"
+[2025-05-11T19:45:42.587Z] Calling Python RAG with query: "my head hurts"
+[2025-05-11T19:45:48.099Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my head hurts']
+[2025-05-11T19:45:48.113Z] Python stderr: DEBUG: Received query: my head hurts
+[2025-05-11T19:45:48.114Z] Python stderr: DEBUG: Found existing model files at C:\Users\Kinga\Downloads\sympAI\src\pages\medical_faiss_index.bin and C:\Users\Kinga\Downloads\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-11T19:45:48.120Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query with history: my head hurts
+[2025-05-11T19:45:50.205Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-11T19:45:50.603Z] Python stdout: I'm here to help you with your symptom-related concerns. Since you mentioned a headache, I'd like to explore some possible causes.
+[2025-05-11T19:45:51.889Z] Python process exited with code 0
+[2025-05-11T19:45:51.890Z] RAG response received (130 chars)
+[2025-05-11T19:45:51.892Z] Response sent to client (130 chars)
+[2025-05-11T19:49:38.029Z] Received query: "test"
+[2025-05-11T19:49:38.030Z] Calling Python RAG with query: "test"
+[2025-05-11T19:49:43.571Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'test']
+[2025-05-11T19:49:43.572Z] Python stderr: DEBUG: Received query: test
+DEBUG: Found existing model files at C:\Users\Kinga\Downloads\sympAI\src\pages\medical_faiss_index.bin and C:\Users\Kinga\Downloads\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-11T19:49:43.576Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query with history: test
+[2025-05-11T19:49:47.007Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-11T19:49:47.523Z] Python stdout: I'm here to help you with your symptom-related concerns. However, it seems that the text you provided is a general clinical background and not a specific symptom or health concern. As a virtual symptom assistant, I'm designed to respond to symptom-related questions and provide helpful information.
+
+If you're experiencing a symptom or health concern, please feel free to describe it to me, and I'll do my best to provide you with helpful information and guidance.
+[2025-05-11T19:49:48.494Z] Python process exited with code 0
+[2025-05-11T19:49:48.495Z] RAG response received (466 chars)
+[2025-05-11T19:49:48.496Z] Response sent to client (466 chars)

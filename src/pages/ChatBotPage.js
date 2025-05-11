@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './ChatBotPage.css';
+import sympAILogo from '../sympAI_logo.png';
 
 // Icons
 const MicIcon = ({ active }) => (
@@ -170,7 +171,7 @@ function ChatBotPage() {
   return (
     <div className="chatbot-page">
       <header className="chatbot-header">
-        <h1>SympAI Chat</h1>
+        <img src={sympAILogo} alt="SympAI Logo" className="logo" />
         <p className="header-subtitle">Your AI-powered symptom assistant</p>
       </header>
 

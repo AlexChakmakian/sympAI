@@ -1,19 +1,18 @@
 /* SympAI ChatBot Page - Enhanced Clean UI */
-/* SympAI ChatBot Page - Enhanced Clean UI */
 .chatbot-page {
   display: flex;
   flex-direction: column;
   height: 100vh;
   font-family: 'Inter', 'Istok Web', sans-serif;
-  background-color: #edf1f5;
+  background-color: #f8fafc;
 }
 
 .chatbot-header {
-  background-color: #2F3E46;
+  background: linear-gradient(135deg, #1a2b3c 0%, #2c4a5e 100%);
   color: white;
-  padding: 1.5rem 1.5rem 1rem;
+  padding: 1.2rem 1.5rem;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -21,38 +20,61 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.chatbot-header .logo {
+  height: 60px;
+  width: auto;
+  margin-bottom: 0.75rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+
+.chatbot-header .logo:hover {
+  transform: scale(1.05);
 }
 
 .chatbot-header h1 {
   margin: 0;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.03em;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to right, #ffffff, #e0e7ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .header-subtitle {
   font-size: 1rem;
   margin-top: 0.35rem;
-  opacity: 0.85;
+  opacity: 0.95;
   letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .chat-container {
   flex: 1;
   display: flex;
   flex-direction: row;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   width: 100%;
   overflow: hidden;
+  padding: 0.9rem;
+  gap: 0.9rem;
 }
 
 /* Previous chats */
 .chat-history {
   width: 300px;
-  background-color: #f5f5f5;
-  border-right: 1px solid #ccc;
-  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  padding: 1.1rem;
   overflow-y: auto;
 }
 
@@ -61,7 +83,9 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: #e0e2dd;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
 .messages {
@@ -69,40 +93,39 @@
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding: 1.2rem 1rem;
+  gap: 1.2rem;
+  padding: 1.2rem;
   scroll-behavior: smooth;
 }
 
 /* Chat Bubbles */
 .message {
-  max-width: 75%;
-  padding: 14px 20px;
+  max-width: 78%;
+  padding: 14px 18px;
   border-radius: 18px;
   word-wrap: break-word;
-  font-size: 15.5px;
-  line-height: 1.6;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  animation: fadeIn 0.3s ease;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  font-size: 15px;
+  line-height: 1.55;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  animation: fadeIn 0.4s ease;
+  transition: all 0.3s ease;
   position: relative;
 }
 
 .message.user {
   align-self: flex-end;
-  background-color: #ACB7C3;
-  color: #403B3B;
+  background: linear-gradient(135deg, #2c4a5e 0%, #1a2b3c 100%);
+  color: #ffffff;
   border-bottom-right-radius: 5px;
-  margin-left: 18%;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  margin-left: 16%;
 }
 
 .message.bot {
   align-self: flex-start;
-  background-color: #C5C7C2;
-  color: #403B3B;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  color: #1a2b3c;
   border-bottom-left-radius: 5px;
-  margin-right: 18%;
+  margin-right: 16%;
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -162,22 +185,23 @@
 .input-bar {
   display: flex;
   align-items: center;
-  background: rgba(245, 247, 250, 0.85);
-  border-radius: 32px;
-  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10);
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.12);
   padding: 10px 18px;
   width: 100%;
   gap: 10px;
   border: 1.5px solid #e3e7ed;
-  transition: border 0.2s, box-shadow 0.2s;
-  backdrop-filter: blur(6px);
-  max-width: 800px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  max-width: 850px;
   margin: 0 auto;
 }
 
 .input-bar:focus-within {
-  border: 1.5px solid #2F3E46;
-  box-shadow: 0 0 0 3px rgba(47, 62, 70, 0.10);
+  border: 1.5px solid #2c4a5e;
+  box-shadow: 0 0 0 3px rgba(44, 74, 94, 0.12);
+  transform: translateY(-1px);
 }
 
 .modern-input {
@@ -185,8 +209,8 @@
   border: none;
   outline: none;
   background: transparent;
-  font-size: 1.08rem;
-  padding: 12px 0;
+  font-size: 1rem;
+  padding: 10px 0;
   color: #2F3E46;
   font-family: inherit;
 }
@@ -194,20 +218,20 @@
 .modern-input::placeholder {
   color: #b0b8c1;
   opacity: 1;
-  font-size: 1.05em;
+  font-size: 1em;
 }
 
 .speech-button-modern, .send-button-modern {
   background: rgba(255,255,255,0.7);
   border: none;
   color: #2F3E46;
-  width: 38px;
-  height: 38px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   cursor: pointer;
   transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
   opacity: 0.85;
@@ -242,35 +266,41 @@
 }
 
 @media (max-width: 768px) {
-  .input-bar {
-    padding: 7px;
-    gap: 4px;
+  .chatbot-header {
+    padding: 1rem;
+  }
+  
+  .chatbot-header .logo {
+    height: 45px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .chatbot-header h1 {
+    font-size: 1.6rem;
+  }
+  
+  .header-subtitle {
+    font-size: 0.9rem;
   }
 
-  .modern-input {
-    font-size: 1rem;
-    padding: 9px 0;
+  .chat-container {
+    padding: 0.5rem;
   }
 
-  .speech-button-modern, .send-button-modern {
-    width: 32px;
-    height: 32px;
-    font-size: 1rem;
-  }
-
-  .message {
-    max-width: 85%;
+  .chat-history {
+    width: 280px;
   }
 }
 
 .history-item {
-  margin-bottom: 12px;
-  padding: 8px;
+  margin-bottom: 10px;
+  padding: 7px;
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 0 3px rgba(0,0,0,0.1);
   cursor: pointer;
   transition: background-color 0.2s;
+  font-size: 0.95rem;
 }
 
 .history-item:hover {
@@ -286,9 +316,9 @@
 .disclaimer {
   text-align: center;
   color: #777;
-  font-size: 0.8rem;
-  margin-top: 1rem;
-  padding: 0.5rem;
+  font-size: 0.78rem;
+  margin-top: 0.9rem;
+  padding: 0.45rem;
   border-top: 1px solid #eee;
 }
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../sympAI_logo.png';
 import './LoginPage.css';
 
 function LoginPage() {
@@ -43,9 +44,24 @@ function LoginPage() {
     }
   };
 
+  const handleSkipLogin = () => {
+    // Set a flag in localStorage to indicate this is a guest session
+    localStorage.setItem('is_guest', 'true');
+    navigate('/chat');
+  };
+
   return (
     <div className="login-container">
       <div className="login-page">
+        <div className="login-logo-top-wrapper">
+          <img
+            src={require('../sympAI2.png')}
+            alt="SympAI Logo"
+            className="login-logo-top"
+            onClick={() => navigate('/')}
+            style={{ cursor: 'pointer', height: '48px', marginBottom: '1.5rem', display: 'block', marginLeft: 'auto', marginRight: 'auto' }}
+          />
+        </div>
         <div className="forms-wrapper">
           <h1>Sign In</h1>
           {error && <p style={{ color: 'red' }}>{error}</p>} {/* Display error message */}
@@ -74,6 +90,11 @@ function LoginPage() {
               LOGIN
             </button>
           </form>
+          <div className="skip-login">
+            <button onClick={handleSkipLogin} className="skip-login-button">
+              Continue as Guest
+            </button>
+          </div>
         </div>
       </div>
 
