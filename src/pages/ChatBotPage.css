@@ -76,7 +76,7 @@
 
 /* Previous chats */
 .chat-history {
-  width: 300px;
+  width: 260px;
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
@@ -86,12 +86,13 @@
 
 /* Main chat column */
 .chat-main {
-  flex: 1;
+  flex: 2.2;
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  min-width: 0;
 }
 
 .messages {
@@ -195,7 +196,7 @@
   border-radius: 28px;
   box-shadow: 0 4px 24px rgba(44, 62, 80, 0.12);
   padding: 10px 18px;
-  width: 100%;
+  width: 90%;
   gap: 10px;
   border: 1.5px solid #e3e7ed;
   transition: all 0.3s ease;
@@ -346,4 +347,206 @@
 .retry-button:hover {
   background-color: #2F3E46;
   color: white;
+}
+
+/* Right-side appointment panel */
+.appointment-panel {
+  width: 220px;
+  margin-left: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.appointment-box {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 0;
+  width: 100%;
+  max-width: 220px;
+  margin-top: 24px;
+  transition: box-shadow 0.2s;
+}
+
+.appointment-header {
+  padding: 14px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a2a3a;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.dropdown-arrow {
+  margin-left: 12px;
+  font-size: 1.2em;
+  transition: transform 0.2s;
+}
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.appointment-dropdown {
+  border-top: 1px solid #f0f0f0;
+  padding: 8px 0;
+  background: #fafbfc;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+.doctor-option {
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.15s;
+  margin-bottom: 2px;
+}
+.doctor-option:hover {
+  background: #e6f0fa;
+}
+.doctor-name {
+  font-weight: 600;
+  color: #1a2a3a;
+}
+.doctor-specialty, .doctor-location {
+  font-size: 0.93em;
+  color: #4a5a6a;
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 900px) {
+  .appointment-panel {
+    width: 100%;
+    margin-left: 0;
+    align-items: stretch;
+    margin-top: 18px;
+  }
+  .appointment-box {
+    max-width: 100%;
+    margin-top: 0;
+  }
+  .chat-history {
+    width: 100%;
+    min-width: 0;
+  }
+  .chat-main {
+    flex: 1;
+  }
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(30,40,60,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 40px rgba(44,62,80,0.18);
+  padding: 2.2rem 2.2rem 1.5rem 2.2rem;
+  min-width: 340px;
+  max-width: 95vw;
+  position: relative;
+  animation: fadeIn 0.3s;
+}
+
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 1.7rem;
+  color: #2c4a5e;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.modal-close:hover { opacity: 1; }
+
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: #1a2a3a;
+  margin-bottom: 1.2rem;
+}
+
+.modal-section {
+  margin-bottom: 1.2rem;
+}
+
+.modal-section label {
+  font-weight: 600;
+  color: #2c4a5e;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.time-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+.time-btn {
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
+  border: 1.5px solid #e3e7ed;
+  background: #f8fafc;
+  color: #2c4a5e;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s, border 0.18s, color 0.18s;
+  font-size: 1rem;
+}
+.time-btn.selected, .time-btn:active {
+  background: #2c4a5e;
+  color: #fff;
+  border-color: #2c4a5e;
+}
+.time-btn.unavailable, .time-btn:disabled {
+  background: #f3f3f3;
+  color: #b0b8c1;
+  border-color: #e3e7ed;
+  cursor: not-allowed;
+}
+
+.modal-confirm {
+  text-align: right;
+  margin-top: 1.2rem;
+}
+.confirm-btn {
+  background: linear-gradient(135deg, #2c4a5e 0%, #1a2b3c 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+  transition: background 0.18s, box-shadow 0.18s;
+}
+.confirm-btn:hover {
+  background: #1a2b3c;
+  box-shadow: 0 4px 16px rgba(44,62,80,0.13);
+}
+
+.modal-confirm.modal-confirm-center {
+  text-align: center;
+  margin-top: 1.2rem;
 }

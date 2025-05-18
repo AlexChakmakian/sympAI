@@ -33,6 +33,32 @@ function ChatBotPage() {
   const inputRef = useRef(null);
   const recognitionRef = useRef(null);
   const userId = parseInt(localStorage.getItem('user_id'));
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [showBookingModal, setShowBookingModal] = useState(false);
+  const [selectedDoctor, setSelectedDoctor] = useState(null);
+  const [selectedDate, setSelectedDate] = useState('2025-05-29');
+  const [selectedTime, setSelectedTime] = useState('');
+  const doctorOptions = [
+    { name: "Dr. Merdula Patel", specialty: "Cardiologist", location: "Los Angeles, CA" },
+    { name: "Dr. Lisa Kim", specialty: "Dermatologist", location: "Los Angeles, CA" },
+    { name: "Dr. Micheal Nguyen", specialty: "Pediatrician", location: "Los Angeles, CA" },
+    { name: "Dr. Emily Lee", specialty: "Neurologist", location: "Los Angeles, CA" },
+    { name: "Dr. Ana Martinez", specialty: "Endocrinologist", location: "Los Angeles, CA" },
+    { name: "Dr. John Kim", specialty: "ENT Specialist", location: "Los Angeles, CA" },
+    { name: "Dr. Natalie Brown", specialty: "Family Medicine", location: "Los Angeles, CA" },
+    { name: "Dr. Samuel Everett", specialty: "Gastroenterologist", location: "Los Angeles, CA" },
+    { name: "Dr. Priya Nandini", specialty: "Rheumatologist", location: "Los Angeles, CA" },
+  ];
+  const availableTimes = {
+    '2025-05-29': ['09:00 AM', '10:30 AM', '01:00 PM', '03:00 PM'],
+    '2025-05-30': ['11:00 AM', '02:00 PM'],
+    '2025-05-31': ['09:00 AM', '12:00 PM', 'Unavailable', '04:00 PM'],
+    '2025-06-01': ['10:00 AM', 'Unavailable', '01:30 PM'],
+    '2025-06-02': ['Unavailable', '11:00 AM', '03:00 PM'],
+    '2025-06-03': ['09:30 AM', 'Unavailable', '02:00 PM'],
+    '2025-06-04': ['Unavailable', 'Unavailable', 'Unavailable'],
+    '2025-06-05': ['10:00 AM', '12:00 PM', 'Unavailable'],
+  };
 
   useEffect(() => {
     // Speech Recognition
@@ -227,7 +253,88 @@ function ChatBotPage() {
 
           <div className="disclaimer">Important: This is not a medical diagnosis. Always consult with healthcare professionals.</div>
         </div>
+
+        {/* Right-side appointment booking panel */}
+        <div className="appointment-panel">
+          <div className="appointment-box">
+            <div
+              className="appointment-header"
+              onClick={() => setIsDropdownOpen((open) => !open)}
+              tabIndex={0}
+              role="button"
+              aria-expanded={isDropdownOpen}
+            >
+              <span>Book an Appointment for Your Symptoms</span>
+              <span className={`dropdown-arrow ${isDropdownOpen ? 'open' : ''}`}>▼</span>
+            </div>
+            {isDropdownOpen && (
+              <div className="appointment-dropdown">
+                {doctorOptions.map((doc, idx) => (
+                  <div
+                    className="doctor-option"
+                    key={idx}
+                    onClick={() => {
+                      setSelectedDoctor(doc);
+                      setShowBookingModal(true);
+                      setSelectedDate('2025-05-29');
+                      setSelectedTime('');
+                    }}
+                  >
+                    <div className="doctor-name">{doc.name}</div>
+                    <div className="doctor-specialty">{doc.specialty}</div>
+                    <div className="doctor-location">{doc.location}</div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
       </div>
+
+      {/* Booking Modal */}
+      {showBookingModal && (
+        <div className="modal-overlay" onClick={() => setShowBookingModal(false)}>
+          <div className="modal-content" onClick={e => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setShowBookingModal(false)}>×</button>
+            <h2>Book Appointment with {selectedDoctor?.name}</h2>
+            <div className="modal-section">
+              <label>Select Date:</label>
+              <input
+                type="date"
+                min="2025-05-29"
+                max="2025-06-05"
+                value={selectedDate}
+                onChange={e => {
+                  setSelectedDate(e.target.value);
+                  setSelectedTime('');
+                }}
+              />
+            </div>
+            <div className="modal-section">
+              <label>Select Time:</label>
+              <div className="time-options">
+                {(availableTimes[selectedDate] || ['Unavailable']).map((time, i) => (
+                  <button
+                    key={i}
+                    className={`time-btn${selectedTime === time ? ' selected' : ''}${time === 'Unavailable' ? ' unavailable' : ''}`}
+                    disabled={time === 'Unavailable'}
+                    onClick={() => setSelectedTime(time)}
+                  >
+                    {time}
+                  </button>
+                ))}
+              </div>
+            </div>
+            {selectedTime && selectedTime !== 'Unavailable' && (
+              <div className="modal-confirm modal-confirm-center">
+                <button className="confirm-btn" onClick={() => setShowBookingModal(false)}>
+                  Book Appointment
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
