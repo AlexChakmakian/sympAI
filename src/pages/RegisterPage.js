@@ -40,9 +40,24 @@ function RegisterPage() {
     }
   };
 
+  const handleSkipRegister = () => {
+    // Set a flag in localStorage to indicate this is a guest session
+    localStorage.setItem('is_guest', 'true');
+    navigate('/chat');
+  };
+
   return (
     <div className="register-container">
       <div className="register-page">
+        <div className="register-logo-top-wrapper">
+          <img
+            src={require('../sympAI2.png')}
+            alt="SympAI Logo"
+            className="register-logo-top"
+            onClick={() => navigate('/')}
+            style={{ cursor: 'pointer', height: '48px', marginBottom: '1.5rem', display: 'block', marginLeft: 'auto', marginRight: 'auto' }}
+          />
+        </div>
         <div className="forms-wrapper">
           <h1>Sign Up</h1>
           {error && <p style={{ color: 'red' }}>{error}</p>}
@@ -71,6 +86,11 @@ function RegisterPage() {
               REGISTER
             </button>
           </form>
+          <div className="skip-register">
+            <button onClick={handleSkipRegister} className="skip-register-button">
+              Continue as Guest
+            </button>
+          </div>
         </div>
       </div>
 
