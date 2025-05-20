@@ -2409,3 +2409,109 @@ If you're experiencing a symptom or health concern, please feel free to describe
 [2025-05-11T19:49:48.494Z] Python process exited with code 0
 [2025-05-11T19:49:48.495Z] RAG response received (466 chars)
 [2025-05-11T19:49:48.496Z] Response sent to client (466 chars)
+[2025-05-13T19:54:26.225Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-13T19:54:26.231Z] Using RAG system from Python notebook for responses
+[2025-05-13T19:57:41.199Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-13T19:57:41.211Z] Using RAG system from Python notebook for responses
+[2025-05-13T19:58:51.158Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-13T19:58:51.162Z] Using RAG system from Python notebook for responses
+[2025-05-13T20:00:03.616Z] Received query: "my head hurts"
+[2025-05-13T20:00:03.618Z] Calling Python RAG with query: "my head hurts"
+[2025-05-13T20:00:03.898Z] Python stderr: Import error: No module named 'faiss'
+[2025-05-13T20:00:03.899Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my head hurts']
+DEBUG: Required packages are missing. Using simple demo mode.
+DEBUG: Using simple demo response function
+[2025-05-13T20:00:03.900Z] Python stdout: Headaches can have various causes ranging from tension and stress to more serious conditions. Common types include tension headaches, migraines, and cluster headaches. It's important to consult with a healthcare provider for persistent or severe headaches.
+[2025-05-13T20:00:03.915Z] Python process exited with code 0
+[2025-05-13T20:00:03.916Z] RAG response received (256 chars)
+[2025-05-13T20:00:03.921Z] Response sent to client (256 chars)
+[2025-05-16T00:36:14.083Z] Received query: "tell me a joke"
+[2025-05-16T00:36:14.102Z] Calling Python RAG with query: "tell me a joke"
+[2025-05-16T00:36:54.536Z] Received query: "tell me a joke"
+[2025-05-16T00:36:54.536Z] Calling Python RAG with query: "tell me a joke"
+[2025-05-16T00:37:59.951Z] Python stderr: Import error: No module named 'faiss'
+[2025-05-16T00:37:59.955Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'tell me a joke']
+DEBUG: Required packages are missing. Using simple demo mode.
+DEBUG: Using simple demo response function
+[2025-05-16T00:37:59.959Z] Python stdout: Based on your description, there could be several possible explanations. For a proper assessment, it would be best to consult with a healthcare provider who can take into account your medical history and perform an examination if needed.
+[2025-05-16T00:37:59.977Z] Python stderr: Import error: No module named 'faiss'
+[2025-05-16T00:37:59.981Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'tell me a joke']
+[2025-05-16T00:37:59.985Z] Python stderr: DEBUG: Required packages are missing. Using simple demo mode.
+DEBUG: Using simple demo response function
+[2025-05-16T00:37:59.994Z] Python stdout: Based on your description, there could be several possible explanations. For a proper assessment, it would be best to consult with a healthcare provider who can take into account your medical history and perform an examination if needed.
+[2025-05-16T00:38:00.166Z] Python process exited with code 0
+[2025-05-16T00:38:00.177Z] RAG response received (237 chars)
+[2025-05-16T00:38:00.249Z] Response sent to client (237 chars)
+[2025-05-16T00:38:00.252Z] Python process exited with code 0
+[2025-05-16T00:38:00.252Z] RAG response received (237 chars)
+[2025-05-16T00:38:00.256Z] Response sent to client (237 chars)
+[2025-05-16T00:38:29.430Z] Received query: "i have a fever"
+[2025-05-16T00:38:29.431Z] Calling Python RAG with query: "i have a fever"
+[2025-05-16T00:38:30.047Z] Python stderr: Import error: No module named 'faiss'
+DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'i have a fever']
+DEBUG: Required packages are missing. Using simple demo mode.
+DEBUG: Using simple demo response function
+[2025-05-16T00:38:30.075Z] Python stdout: Fever is the body's natural response to infection or illness. Common causes include viral infections like the flu, bacterial infections such as strep throat, or inflammatory conditions. If a fever is high, persists for more than a few days, or is accompanied by severe symptoms, it's important to seek medical attention.
+[2025-05-16T00:38:30.094Z] Python process exited with code 0
+[2025-05-16T00:38:30.095Z] RAG response received (320 chars)
+[2025-05-16T00:38:30.100Z] Response sent to client (320 chars)
+[2025-05-16T00:38:47.436Z] Received query: "can you suggest any medication?"
+[2025-05-16T00:38:47.436Z] Calling Python RAG with query: "can you suggest any medication?"
+[2025-05-16T00:38:47.973Z] Python stderr: Import error: No module named 'faiss'
+[2025-05-16T00:38:47.986Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'can you suggest any medication?']
+[2025-05-16T00:38:47.990Z] Python stderr: DEBUG: Required packages are missing. Using simple demo mode.
+DEBUG: Using simple demo response function
+[2025-05-16T00:38:47.991Z] Python stdout: Based on your description, there could be several possible explanations. For a proper assessment, it would be best to consult with a healthcare provider who can take into account your medical history and perform an examination if needed.
+[2025-05-16T00:38:48.010Z] Python process exited with code 0
+[2025-05-16T00:38:48.010Z] RAG response received (237 chars)
+[2025-05-16T00:38:48.026Z] Response sent to client (237 chars)
+[2025-05-16T01:21:33.306Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-16T01:21:33.336Z] Using RAG system from Python notebook for responses
+[2025-05-16T01:22:48.554Z] Received query: "my head hurts"
+[2025-05-16T01:22:48.558Z] Calling Python RAG with query: "my head hurts"
+[2025-05-16T01:28:31.013Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-16T01:28:31.021Z] Using RAG system from Python notebook for responses
+[2025-05-16T01:31:18.833Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-16T01:31:18.840Z] Using RAG system from Python notebook for responses
+[2025-05-16T01:32:12.982Z] Received query: "my head hurts"
+[2025-05-16T01:32:12.984Z] Calling Python RAG with query: "my head hurts"
+[2025-05-16T01:32:13.313Z] Python stderr: Import error: No module named 'faiss'
+[2025-05-16T01:32:13.324Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my head hurts']
+[2025-05-16T01:32:13.330Z] Python stderr: DEBUG: Required packages are missing. Using simple demo mode.
+DEBUG: Using simple demo response function
+[2025-05-16T01:32:13.331Z] Python stdout: Headaches can have various causes ranging from tension and stress to more serious conditions. Common types include tension headaches, migraines, and cluster headaches. It's important to consult with a healthcare provider for persistent or severe headaches.
+[2025-05-16T01:32:13.356Z] Python process exited with code 0
+[2025-05-16T01:32:13.359Z] RAG response received (256 chars)
+[2025-05-16T01:32:13.369Z] Response sent to client (256 chars)
+[2025-05-20T07:24:31.242Z] Received query: "my head hurts"
+[2025-05-20T07:24:31.256Z] Calling Python RAG with query: "my head hurts"
+[2025-05-20T07:24:31.431Z] Python stderr: Import error: No module named 'faiss'
+DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my head hurts']
+[2025-05-20T07:24:31.431Z] Python stderr: DEBUG: Required packages are missing. Using simple demo mode.
+DEBUG: Using simple demo response function
+[2025-05-20T07:24:31.433Z] Python stdout: Headaches can have various causes ranging from tension and stress to more serious conditions. Common types include tension headaches, migraines, and cluster headaches. It's important to consult with a healthcare provider for persistent or severe headaches.
+[2025-05-20T07:24:31.444Z] Python process exited with code 0
+[2025-05-20T07:24:31.445Z] RAG response received (256 chars)
+[2025-05-20T07:24:31.454Z] Response sent to client (256 chars)
+[2025-05-20T18:59:44.287Z] Received query: "my stomach aches"
+[2025-05-20T18:59:44.318Z] Calling Python RAG with query: "my stomach aches"
+[2025-05-20T18:59:44.496Z] Python stderr: Import error: No module named 'faiss'
+DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my stomach aches']
+DEBUG: Required packages are missing. Using simple demo mode.
+DEBUG: Using simple demo response function
+[2025-05-20T18:59:44.496Z] Python stdout: Based on your description, there could be several possible explanations. For a proper assessment, it would be best to consult with a healthcare provider who can take into account your medical history and perform an examination if needed.
+[2025-05-20T18:59:44.504Z] Python process exited with code 0
+[2025-05-20T18:59:44.510Z] RAG response received (237 chars)
+[2025-05-20T18:59:44.530Z] Response sent to client (237 chars)
+[2025-05-20T19:20:06.987Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-20T19:20:06.992Z] Using RAG system from Python notebook for responses
+[2025-05-20T19:21:17.844Z] Received query: "my arm hurts"
+[2025-05-20T19:21:17.847Z] Calling Python RAG with query: "my arm hurts"
+[2025-05-20T19:21:18.053Z] Python stderr: Import error: No module named 'faiss'
+DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'my arm hurts']
+DEBUG: Required packages are missing. Using simple demo mode.
+DEBUG: Using simple demo response function
+[2025-05-20T19:21:18.058Z] Python stdout: Based on your description, there could be several possible explanations. For a proper assessment, it would be best to consult with a healthcare provider who can take into account your medical history and perform an examination if needed.
+[2025-05-20T19:21:18.064Z] Python process exited with code 0
+[2025-05-20T19:21:18.064Z] RAG response received (237 chars)
+[2025-05-20T19:21:18.078Z] Response sent to client (237 chars)
