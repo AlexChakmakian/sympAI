@@ -21,7 +21,7 @@ const SendIcon = () => (
 
 function ChatBotPage() {
   const [messages, setMessages] = useState([
-    { text: 'Hello! I\'m SympAI, your symptom assistant. How can I help you today?', sender: 'bot' }
+    { text: 'Hello! I\'m SympAI🩺</b>, your symptom assistant.😊 How can I help you today? Please start by giving me your <b>name</b>, <b>age</b> and any <b>prior medical history</b> you want me to know about.', sender: 'bot', isHtml: true }
   ]);
   const [inputText, setInputText] = useState('');
   const [isListening, setIsListening] = useState(false);
@@ -181,8 +181,12 @@ function ChatBotPage() {
       { text: chat.response, sender: 'bot' }
     ]);
   };
-
   const formatMessage = (text) => {
+    // If the message contains HTML and has the isHtml flag
+    if (messages.find(m => m.text === text)?.isHtml) {
+      return <span dangerouslySetInnerHTML={{ __html: text }} />;
+    }
+    
     const urlRegex = /(https?:\/\/[^\s]+)/g;
     return text.split(urlRegex).map((part, index) =>
       part.match(urlRegex) ? (

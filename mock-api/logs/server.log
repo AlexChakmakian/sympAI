@@ -2409,3 +2409,273 @@ If you're experiencing a symptom or health concern, please feel free to describe
 [2025-05-11T19:49:48.494Z] Python process exited with code 0
 [2025-05-11T19:49:48.495Z] RAG response received (466 chars)
 [2025-05-11T19:49:48.496Z] Response sent to client (466 chars)
+[2025-05-23T21:53:26.993Z] SympAI mock API server is running on http://localhost:3001
+[2025-05-23T21:53:26.995Z] Using RAG system from Python notebook for responses
+[2025-05-23T21:59:03.494Z] Received query: "Hello my name is Alex"
+[2025-05-23T21:59:03.494Z] Calling Python RAG with query: "Hello my name is Alex"
+[2025-05-23T21:59:42.425Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'Hello my name is Alex']
+[2025-05-23T21:59:42.426Z] Python stderr: DEBUG: Received query: Hello my name is Alex
+DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-23T21:59:42.444Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query with history: Hello my name is Alex
+[2025-05-23T21:59:46.467Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-23T21:59:46.979Z] Python stdout: Hello Alex! I'm SympAI, your virtual symptom assistant. I'm here to help you with any health-related concerns you may have. Please feel free to share your symptoms or questions, and I'll do my best to provide you with accurate and helpful information.
+
+As we're starting fresh, I don't have any specific information about your medical history or current symptoms. If you're ready to share, I'm all ears!
+[2025-05-23T21:59:47.525Z] Python process exited with code 0
+[2025-05-23T21:59:47.526Z] RAG response received (405 chars)
+[2025-05-23T21:59:47.528Z] Response sent to client (405 chars)
+[2025-05-23T22:39:58.858Z] Received query: "Why do I get stomach pain after eating dairy"
+[2025-05-23T22:39:58.859Z] Calling Python RAG with query: "Why do I get stomach pain after eating dairy"
+[2025-05-23T22:40:05.046Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'Why do I get stomach pain after eating dairy']
+[2025-05-23T22:40:05.054Z] Python stderr: DEBUG: Received query: Why do I get stomach pain after eating dairy
+[2025-05-23T22:40:05.055Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-23T22:40:05.060Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query with history: Why do I get stomach pain after eating dairy
+[2025-05-23T22:40:07.500Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-23T22:40:08.083Z] Python stdout: Alex! Stomach pain after eating dairy products is a common issue for many people. There are a few possible explanations for this:
+
+1. Lactose intolerance: If you're lactose intolerant, your body may not produce enough lactase enzyme to break down lactose, a sugar found in dairy products. Undigested lactose can lead to bloating, discomfort, and stomach pain.
+2. Casein sensitivity: Casein is a protein found in dairy products. Some people may be sensitive to casein, which can cause an immune response, leading to inflammation and stomach pain.
+3. Other dairy-related issues: Other potential culprits include dairy allergies, irritable bowel syndrome (IBS), or gastrointestinal infections.
+
+If you're experiencing persistent stomach pain after eating dairy, it's a good idea to speak with a healthcare professional to rule out any underlying conditions. In the meantime, you may want to try eliminating dairy products from your diet for a few weeks to see if your symptoms improve.
+[2025-05-23T22:40:08.741Z] Python process exited with code 0
+[2025-05-23T22:40:08.742Z] RAG response received (988 chars)
+[2025-05-23T22:40:08.742Z] Response sent to client (988 chars)
+[2025-05-23T22:40:48.956Z] Received query: "I have tried to mitigate dairy and stop it. But when I started to get dairy again the pain came back."
+[2025-05-23T22:40:48.958Z] Calling Python RAG with query: "I have tried to mitigate dairy and stop it. But when I started to get dairy again the pain came back."
+[2025-05-23T22:40:55.125Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'I have tried to mitigate dairy and stop it. But when I started to get dairy again the pain came back.']
+[2025-05-23T22:40:55.133Z] Python stderr: DEBUG: Received query: I have tried to mitigate dairy and stop it. But when I started to get dairy again the pain came back.
+[2025-05-23T22:40:55.134Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-23T22:40:55.137Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-23T22:40:55.137Z] Python stderr: DEBUG: Processing query with history: I have tried to mitigate dairy and stop it. But when I started to get dairy again the pain came back.
+[2025-05-23T22:40:57.144Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-23T22:40:57.617Z] Python stdout: Thank you for providing more context, Alex. Given your history of dairy intolerance and the return of symptoms after reintroducing dairy, it's possible that there may be an underlying condition contributing to your stomach pain.
+
+Considering your symptoms, I'd like to explore a few possibilities:
+
+1. Inflammatory Bowel Disease (IBD): Given your previous experience with active flare-ups and lack of response to conventional therapy, it's possible that you may have an underlying IBD, such as Crohn's disease or ulcerative colitis. Dairy can exacerbate IBD symptoms.
+2. Gastrointestinal motility issues: Dairy can slow down gastric emptying, leading to discomfort and pain. This could be related to irritable bowel syndrome (IBS) or other motility disorders.
+3. Biliary tract issues: The ultrasound finding of significant biliary sludge suggests that you may have some degree of gallbladder dysfunction or cholecystitis. This could be contributing to your right upper quadrant abdominal pain, especially after meals.
+
+I recommend discussing your symptoms with a healthcare professional, such as a gastroenterologist or a primary care physician, to further evaluate your condition. They may recommend additional testing, such as endoscopy, colonoscopy, or imaging studies, to determine the underlying cause of your symptoms.
+[2025-05-23T22:40:58.316Z] Python process exited with code 0
+[2025-05-23T22:40:58.316Z] RAG response received (1332 chars)
+[2025-05-23T22:40:58.317Z] Response sent to client (1332 chars)
+[2025-05-23T22:44:37.295Z] Received query: "I have a headache today"
+[2025-05-23T22:44:37.295Z] Calling Python RAG with query: "I have a headache today"
+[2025-05-23T22:44:43.293Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'I have a headache today']
+[2025-05-23T22:44:43.294Z] Python stderr: DEBUG: Received query: I have a headache today
+DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-23T22:44:43.297Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-23T22:44:43.298Z] Python stderr: DEBUG: Processing query with history: I have a headache today
+[2025-05-23T22:44:45.215Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-23T22:44:45.482Z] Python stdout: I'm SympAI, and I'm here to help you with your headache. Before we dive in, may I have some information to better assist you? Could you please share your name, age, and any past medical problems or health issues you may have? This will help me provide more tailored guidance.
+[2025-05-23T22:44:46.167Z] Python process exited with code 0
+[2025-05-23T22:44:46.168Z] RAG response received (275 chars)
+[2025-05-23T22:44:46.168Z] Response sent to client (275 chars)
+[2025-05-23T22:45:13.158Z] Received query: "i have it daily"
+[2025-05-23T22:45:13.160Z] Calling Python RAG with query: "i have it daily"
+[2025-05-23T22:45:19.112Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'i have it daily']
+[2025-05-23T22:45:19.119Z] Python stderr: DEBUG: Received query: i have it daily
+[2025-05-23T22:45:19.119Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-23T22:45:19.123Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-23T22:45:19.123Z] Python stderr: DEBUG: Processing query with history: i have it daily
+[2025-05-23T22:45:20.878Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-23T22:45:22.594Z] Python stdout: I'm SympAI, and I'm here to help you with your daily headaches. Since you experience headaches frequently, it's essential to consider possible underlying causes. 
+
+Given your daily headaches, I'd like to ask a few more questions to help narrow down the potential causes. Have you experienced any other symptoms along with the headaches, such as sensitivity to light or sound, nausea, or vomiting? Are the headaches unilateral (one-sided) or bilateral (both sides)?
+[2025-05-23T22:45:23.245Z] Python process exited with code 0
+[2025-05-23T22:45:23.246Z] RAG response received (466 chars)
+[2025-05-23T22:45:23.247Z] Response sent to client (466 chars)
+[2025-05-23T22:48:28.626Z] Received query: "My head has been hurting today"
+[2025-05-23T22:48:28.626Z] Calling Python RAG with query: "My head has been hurting today"
+[2025-05-23T22:48:34.635Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'My head has been hurting today']
+[2025-05-23T22:48:34.636Z] Python stderr: DEBUG: Received query: My head has been hurting today
+DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-23T22:48:34.639Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query with history: My head has been hurting today
+[2025-05-23T22:48:36.609Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-23T22:48:37.641Z] Python stdout: I'm here to help. Can you please tell me your name, age, and if you have any past medical problems or health issues? This will help me provide a more accurate assessment of your symptoms.
+
+Assuming you're experiencing a headache, I'll do my best to help you identify potential causes. Can you describe the headache you're experiencing? Is it a sharp, stabbing pain or a dull ache? Is it located on one side of your head or is it more widespread?
+[2025-05-23T22:48:38.313Z] Python process exited with code 0
+[2025-05-23T22:48:38.314Z] RAG response received (447 chars)
+[2025-05-23T22:48:38.315Z] Response sent to client (447 chars)
+[2025-05-23T22:49:16.033Z] Received query: "My name is Alex, I am 25 and I have chronic migraines."
+[2025-05-23T22:49:16.033Z] Calling Python RAG with query: "My name is Alex, I am 25 and I have chronic migraines."
+[2025-05-23T22:49:22.023Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'My name is Alex, I am 25 and I have chronic migraines.']
+[2025-05-23T22:49:22.030Z] Python stderr: DEBUG: Received query: My name is Alex, I am 25 and I have chronic migraines.
+[2025-05-23T22:49:22.031Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-23T22:49:22.034Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-23T22:49:22.035Z] Python stderr: DEBUG: Processing query with history: My name is Alex, I am 25 and I have chronic migraines.
+[2025-05-23T22:49:23.780Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-23T22:49:24.118Z] Python stdout: Thank you for sharing that information, Alex. Given your history of chronic migraines, I'd like to explore some potential triggers and possible causes for your current headache.
+
+Can you tell me more about the headache you're experiencing? Is it accompanied by any other symptoms, such as sensitivity to light or sound, nausea, or visual disturbances? Are there any specific activities or factors that seem to trigger or worsen your headaches?
+[2025-05-23T22:49:24.767Z] Python process exited with code 0
+[2025-05-23T22:49:24.768Z] RAG response received (445 chars)
+[2025-05-23T22:49:24.769Z] Response sent to client (445 chars)
+[2025-05-23T22:49:51.929Z] Received query: "Yes I have nausea as well. No other symptoms"
+[2025-05-23T22:49:51.930Z] Calling Python RAG with query: "Yes I have nausea as well. No other symptoms"
+[2025-05-23T22:49:57.905Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'Yes I have nausea as well. No other symptoms']
+[2025-05-23T22:49:57.913Z] Python stderr: DEBUG: Received query: Yes I have nausea as well. No other symptoms
+[2025-05-23T22:49:57.913Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-23T22:49:57.917Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-23T22:49:57.917Z] Python stderr: DEBUG: Processing query with history: Yes I have nausea as well. No other symptoms
+[2025-05-23T22:49:59.723Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-23T22:50:00.073Z] Python stdout: Thank you for the additional information, Alex. Given your history of chronic migraines and current symptoms of headache and nausea, I'd like to consider a few possibilities.
+
+It's possible that your headache and nausea could be related to a migraine episode. However, the presence of nausea without other typical migraine symptoms like visual disturbances or sensitivity to light suggests that there may be another factor at play.
+
+I'd like to ask, have you experienced any changes in your diet or environment recently that could be contributing to your symptoms? For example, have you eaten anything new or unusual, or have you been exposed to any new allergens or irritants?
+[2025-05-23T22:50:00.739Z] Python process exited with code 0
+[2025-05-23T22:50:00.739Z] RAG response received (681 chars)
+[2025-05-23T22:50:00.740Z] Response sent to client (681 chars)
+[2025-05-23T22:50:31.745Z] Received query: "Yes I have eaten fast food, mcdonalds. No other allergens"
+[2025-05-23T22:50:31.746Z] Calling Python RAG with query: "Yes I have eaten fast food, mcdonalds. No other allergens"
+[2025-05-23T22:50:37.724Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'Yes I have eaten fast food, mcdonalds. No other allergens']
+[2025-05-23T22:50:37.732Z] Python stderr: DEBUG: Received query: Yes I have eaten fast food, mcdonalds. No other allergens
+[2025-05-23T22:50:37.733Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-23T22:50:37.736Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query with history: Yes I have eaten fast food, mcdonalds. No other allergens
+[2025-05-23T22:50:39.761Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-23T22:50:40.385Z] Python stdout: Thank you for sharing that information, Alex. Given your recent consumption of fast food, particularly from McDonald's, it's possible that you may be experiencing a food-related reaction.
+
+As a food allergen, McDonald's menu items may contain common allergens such as gluten, soy, or dairy. Consuming these allergens can trigger an allergic reaction, which may manifest as headache and nausea, as you're experiencing.
+
+It's also possible that the food may not be the sole cause, but rather a trigger that's exacerbating your underlying chronic migraines.
+
+I would recommend keeping a food diary to track your eating habits and symptoms. This may help identify any patterns or correlations between your diet and headaches. Additionally, you may want to consider speaking with your healthcare provider about potential dietary changes or supplements that could help alleviate your symptoms.
+
+Please let me know if you have any further questions or concerns!
+[2025-05-23T22:50:41.015Z] Python process exited with code 0
+[2025-05-23T22:50:41.015Z] RAG response received (962 chars)
+[2025-05-23T22:50:41.017Z] Response sent to client (962 chars)
+[2025-05-23T22:51:00.616Z] Received query: "What OTC should I take"
+[2025-05-23T22:51:00.616Z] Calling Python RAG with query: "What OTC should I take"
+[2025-05-23T22:51:06.627Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'What OTC should I take']
+[2025-05-23T22:51:06.636Z] Python stderr: DEBUG: Received query: What OTC should I take
+[2025-05-23T22:51:06.637Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-23T22:51:06.640Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-23T22:51:06.641Z] Python stderr: DEBUG: Processing query with history: What OTC should I take
+[2025-05-23T22:51:08.861Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-23T22:51:09.328Z] Python stdout: I'm not a doctor, but I can provide some general guidance on over-the-counter (OTC) medications that may help alleviate headache and nausea symptoms. However, please consult with your healthcare provider before taking any medication, especially if you have a history of chronic migraines.
+
+For headache relief, you may consider taking an OTC pain reliever such as:
+
+1. Acetaminophen (Tylenol): 500-1000 mg every 4-6 hours as needed.
+2. Ibuprofen (Advil, Motrin): 200-400 mg every 4-6 hours as needed.
+
+For nausea relief, you may consider taking an OTC anti-nausea medication such as:
+
+1. Meclizine (Bonine): 25-50 mg every 24 hours as needed.
+2. Dimenhydrinate (Dramamine): 50-100 mg every 4-6 hours as needed.
+
+Remember to always follow the recommended dosage and consult with your healthcare provider if you have any questions or concerns.
+
+Please note that I'm not a doctor, and you should consult with your healthcare provider before taking any medication.
+[2025-05-23T22:51:09.928Z] Python process exited with code 0
+[2025-05-23T22:51:09.928Z] RAG response received (974 chars)
+[2025-05-23T22:51:09.929Z] Response sent to client (974 chars)
+[2025-05-24T00:09:12.160Z] Received query: "My name is Alex, I am 20. No prior history."
+[2025-05-24T00:09:12.161Z] Calling Python RAG with query: "My name is Alex, I am 20. No prior history."
+[2025-05-24T00:09:18.118Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'My name is Alex, I am 20. No prior history.']
+DEBUG: Received query: My name is Alex, I am 20. No prior history.
+[2025-05-24T00:09:18.119Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-24T00:09:18.123Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-24T00:09:18.123Z] Python stderr: DEBUG: Processing query with history: My name is Alex, I am 20. No prior history.
+[2025-05-24T00:09:19.966Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-24T00:09:20.536Z] Python stdout: I'm happy to help you with your symptom-related questions, Alex. As a 20-year-old with no prior health history, it's great that you're taking proactive steps to address any concerns you may have.
+
+Can you please describe the symptoms you're experiencing or the health concerns you'd like to discuss? I'll do my best to provide you with accurate and helpful information.
+[2025-05-24T00:09:21.133Z] Python process exited with code 0
+[2025-05-24T00:09:21.133Z] RAG response received (371 chars)
+[2025-05-24T00:09:21.134Z] Response sent to client (371 chars)
+[2025-05-24T00:09:33.272Z] Received query: "My stomach is hurting when I drink dairy do you know why"
+[2025-05-24T00:09:33.272Z] Calling Python RAG with query: "My stomach is hurting when I drink dairy do you know why"
+[2025-05-24T00:09:38.958Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'My stomach is hurting when I drink dairy do you know why']
+[2025-05-24T00:09:38.966Z] Python stderr: DEBUG: Received query: My stomach is hurting when I drink dairy do you know why
+[2025-05-24T00:09:38.966Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-24T00:09:38.970Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-24T00:09:38.970Z] Python stderr: DEBUG: Processing query with history: My stomach is hurting when I drink dairy do you know why
+[2025-05-24T00:09:41.017Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-24T00:09:41.396Z] Python stdout: Alex, it's possible that you're experiencing lactose intolerance or a dairy allergy, which could be causing your stomach to hurt when you drink dairy products. Lactose intolerance occurs when your body doesn't produce enough lactase, the enzyme that breaks down lactose, a sugar found in milk. This can lead to symptoms like bloating, gas, and stomach pain.
+
+Dairy allergy, on the other hand, is an immune system reaction to one of the proteins in milk, such as casein or whey. This can cause a range of symptoms, including hives, itching, swelling, stomach cramps, diarrhea, and vomiting.
+
+If you're experiencing persistent or severe symptoms, it's a good idea to speak with a healthcare provider to rule out any underlying conditions. In the meantime, you might consider trying a dairy-free diet or taking a lactase enzyme supplement to see if that alleviates your symptoms.
+[2025-05-24T00:09:41.986Z] Python process exited with code 0
+[2025-05-24T00:09:41.987Z] RAG response received (880 chars)
+[2025-05-24T00:09:41.987Z] Response sent to client (880 chars)
+[2025-05-24T00:10:00.114Z] Received query: "What can I do so that it does not hurt when I drink"
+[2025-05-24T00:10:00.114Z] Calling Python RAG with query: "What can I do so that it does not hurt when I drink"
+[2025-05-24T00:10:06.118Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'What can I do so that it does not hurt when I drink']
+[2025-05-24T00:10:06.127Z] Python stderr: DEBUG: Received query: What can I do so that it does not hurt when I drink
+[2025-05-24T00:10:06.128Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-24T00:10:06.131Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+[2025-05-24T00:10:06.131Z] Python stderr: DEBUG: Processing query with history: What can I do so that it does not hurt when I drink
+[2025-05-24T00:10:10.503Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-24T00:10:11.589Z] Python stdout: Alex, to alleviate the discomfort when drinking dairy products, you can try the following:
+
+1. Consider a lactose-free or low-lactose dairy product, such as hard cheeses, yogurt, or milk with added lactase enzyme.
+2. Try a dairy-free alternative, such as almond milk, soy milk, or coconut milk.
+3. Gradually introduce small amounts of dairy into your diet to see if your body can tolerate it.
+4. If you're lactose intolerant, you can take a lactase enzyme supplement with dairy products to help break down lactose.
+5. If you're allergic to dairy, it's best to avoid it altogether and opt for dairy-free alternatives.
+
+It's also important to note that if you experience persistent or severe symptoms, it's always a good idea to consult with a healthcare provider to rule out any underlying conditions.
+
+Remember, if you're experiencing any severe or concerning symptoms, it's always best to seek medical attention.
+[2025-05-24T00:10:12.164Z] Python process exited with code 0
+[2025-05-24T00:10:12.165Z] RAG response received (923 chars)
+[2025-05-24T00:10:12.166Z] Response sent to client (923 chars)
+[2025-05-24T00:10:41.028Z] Received query: "Thanks I am also getting headaches"
+[2025-05-24T00:10:41.029Z] Calling Python RAG with query: "Thanks I am also getting headaches"
+[2025-05-24T00:10:46.987Z] Python stderr: DEBUG: Starting SympAI RAG script with args: ['./src/pages/rag_api.py', 'Thanks I am also getting headaches']
+[2025-05-24T00:10:46.997Z] Python stderr: DEBUG: Received query: Thanks I am also getting headaches
+[2025-05-24T00:10:46.998Z] Python stderr: DEBUG: Found existing model files at C:\Users\alex\Desktop\sympAI\src\pages\medical_faiss_index.bin and C:\Users\alex\Desktop\sympAI\src\pages\medical_corpus_data.pkl
+[2025-05-24T00:10:47.001Z] Python stderr: DEBUG: Successfully loaded index with 4999 vectors and 4999 documents
+DEBUG: Using full RAG model
+DEBUG: Processing query with history: Thanks I am also getting headaches
+[2025-05-24T00:10:49.456Z] Python stderr: DEBUG: Retrieved 3 documents
+[2025-05-24T00:10:49.944Z] Python stdout: Alex, headaches can be caused by a variety of factors. Since you're experiencing headaches along with stomach discomfort when consuming dairy, it's possible that the two symptoms might be related.
+
+In the context of general medicine and neurology, headaches can be a symptom of various conditions, such as:
+
+* Migraines
+* Tension headaches
+* Sinusitis
+* Allergies
+* Medication overuse
+* Dehydration
+
+It's also possible that your headaches could be related to the dairy intolerance or allergy, as some people may experience headaches as a symptom of an underlying food intolerance.
+
+To better understand the cause of your headaches, I would recommend keeping a symptom journal to track when your headaches occur, what you've eaten or done before they start, and any other potential triggers. This can help you and your healthcare provider identify any patterns or correlations.
+
+In the meantime, you might consider trying some general headache-relief measures, such as:
+
+* Staying hydrated by drinking plenty of water
+* Getting regular exercise
+* Practicing relaxation techniques, such as deep breathing or meditation
+* Avoiding triggers, such as certain foods, stress, or lack of sleep
+
+If your headaches persist or worsen, it's always a good idea to consult with a healthcare provider to rule out any underlying conditions.
+[2025-05-24T00:10:50.531Z] Python process exited with code 0
+[2025-05-24T00:10:50.531Z] RAG response received (1346 chars)
+[2025-05-24T00:10:50.533Z] Response sent to client (1346 chars)
